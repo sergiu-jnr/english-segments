@@ -1,0 +1,42 @@
+.footer {
+    margin-top: 100px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.legal {
+    display: flex;
+    gap: 20px;
+}
+
+.legalLink span {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.socialLink span {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}

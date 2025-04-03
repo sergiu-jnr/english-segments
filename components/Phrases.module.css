@@ -1,0 +1,49 @@
+.phrases {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+    gap: 50px;
+}
+
+.phrase {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.phrase img {
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+
+.phraseText {
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 40px;
+    text-align: center;
+    margin: auto
+}
+
+.phraseTranslation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    top: calc(100% + 10px);
+    font-weight: 600;
+    color: #52d1de;
+}

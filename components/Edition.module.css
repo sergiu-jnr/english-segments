@@ -1,0 +1,141 @@
+.edition {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 50px 30px;
+}
+
+.title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    /* text-align: center; */
+}
+
+.categoryTitle {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 50px 0 10px 0;
+    color: #fff;
+    letter-spacing: 0.75px;
+    display: flex;
+    align-content: center;
+    gap: 6px;
+}
+
+.categoryLink {
+    text-decoration: underline;
+    font-size: 12px;
+    color: #52d1de;
+    line-height: 17px;
+    letter-spacing: 0.25px;
+}
+
+.tags {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    /* text-transform: uppercase; */
+    font-weight: 600;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+    z-index: 2;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tagFlag {
+    width: 22px;
+    height: 22px;
+    border-radius: 2px;
+}
+
+.segments {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: grid;
+    gap: 50px;
+    flex: 1;
+    margin: 20px 0 40px 0;
+}
+
+.segment {
+    background: #1e2939;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.segment:hover {
+    background: #18212e;
+}
+
+.segment:hover .imageContainer {
+    opacity: 0.8;
+}
+
+.segmentDetails {
+    padding: 20px;
+    /* display: flex; */
+    gap: 10px;
+    flex: 1;
+    align-content: center;
+}
+
+.segment h3 {
+    text-align: center;
+    /* margin: 15px 20px 5px 20px; */
+    font-size: 18px;
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+.segment p {
+    opacity: 0.6;
+    /* margin: 5px 20px 30px 20px; */
+    text-align: center;
+}
+
+.segment a {
+    display: block;
+    background: #18212e;
+    padding: 15px 20px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.segment a:hover {
+    opacity: 0.75;
+}
+
+.imageContainer {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.imageContainer:before {
+    content: "";
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.8491596467688638) 8%, rgba(0,0,0,0.6838935403262867) 42%, rgba(255,255,255,0) 100%);     position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    height: 75px;
+    width: 100%;
+}

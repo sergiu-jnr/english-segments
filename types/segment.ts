@@ -1,0 +1,18 @@
+export default interface Segment {
+    id: number
+    title: string
+    description: string
+    cover_image: string
+    video_file: string | null
+    audio_file: string
+    category: string
+    context: string
+    source: string
+    texts: string[]
+    audios: string[]
+    lang: string
+    type: string
+    group_identifier: string
+    slug: string
+    created_at: string
+}

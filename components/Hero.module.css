@@ -1,0 +1,14 @@
+.hero {
+    text-align: center;
+    padding: 100px 0 25px 0;
+}
+
+.title {
+    font-size: 42px;
+}
+
+.description {
+    font-size: 22px;
+    margin-top: 15px;
+    opacity: 0.75;
+}
