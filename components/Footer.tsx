@@ -23,17 +23,17 @@ const Footer: React.FC = () => {
 
         <div className={styles.social}>
           <Link href={'https://www.youtube.com/'} className={styles.socialLink}>
-            <Image src="/youtube.svg" alt="New English on Youtube" width={20} height={20} />
+            <Image src="/media/youtube.svg" alt="New English on Youtube" width={20} height={20} />
             <span>Youtube</span>
           </Link>
 
           <Link href={'https://www.tiktok.com/'} className={styles.socialLink}>
-            <Image src="/tiktok.svg" alt="New English on TikTok" width={20} height={20} />
+            <Image src="/media/tiktok.svg" alt="New English on TikTok" width={20} height={20} />
             <span>TikTok</span>
           </Link>
 
           <Link href={'https://www.instragram.com/'} className={styles.socialLink}>
-            <Image src="/instagram.svg" alt="New English on Instagram" width={20} height={20} />
+            <Image src="/media/instagram.svg" alt="New English on Instagram" width={20} height={20} />
             <span>Instagram</span>
           </Link>
         </div>

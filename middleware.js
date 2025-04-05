@@ -29,5 +29,5 @@ export function middleware(request) {
 }
 
 export const config = {
-  matcher: "/((?!_next|api|public).*)", // Ignore Next.js internal files and APIs
+  matcher: "/((?!_next|api|public|media).*)", // Ignore Next.js internal files and APIs
 };

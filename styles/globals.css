@@ -10,6 +10,17 @@
   }
 }
 
+::cue {
+  color: #101828;
+  background-color: rgb(82, 209, 222);
+  font-weight: bold;
+  font-size: 1.2vw;
+  /* font-size: min(3vw, 24px); */
+  /* font-size: 14px;
+  font-weight: bold;
+  line-height: 18px; */
+}
+
 html,
 body {
   max-width: 100vw;

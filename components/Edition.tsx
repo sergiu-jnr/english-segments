@@ -1,9 +1,12 @@
+"use client";
+
 import React from "react";
 import styles from "./Edition.module.css";
 import Segment from "@/types/segment";
 import Link from "next/link";
 import Image from "next/image";
 import categoryToTitle from "@/constants/categoryToTitle";
+import ReactPlayer from 'react-player'
 
 type Props = {
     segments: Segment[]
@@ -20,7 +23,7 @@ const Edition: React.FC<Props> = (props: Props) => {
 
     return (
         <div className={styles.edition}>
-            <h2 className={styles.title}>Latest Edition</h2>
+            {/* <h2 className={styles.title}>Latest Edition</h2> */}
 
             {Object.keys(categories).map((category) => {
                 const categorySegments = categories[category as keyof typeof categories];
@@ -36,34 +39,7 @@ const Edition: React.FC<Props> = (props: Props) => {
                         </h3>
                         <div className={styles.segments}>
                             {categorySegments.map((segment) => (
-                                <Link href={`/segment/${segment.id}/${segment.slug}`} key={segment.id} className={styles.segment}>
-                                    <div className={styles.imageContainer}>
-                                        <Image
-                                            fill={true}
-                                            // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                            src={segment.cover_image}
-                                            alt={segment.title}
-                                            style={{ objectFit: "cover" }}
-                                            // width={300}
-                                            // height={200}
-                                            className={styles.segmentImage}
-                                        />
-
-                                        <div className={styles.tags}>
-                                            <div className={styles.tag}>
-                                                <span className={`${styles.tagFlag} fi fi-gb`} />
-                                                American English • 30s
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={styles.segmentDetails}>
-                                        <h3 className={styles.segmentTitle}>{segment.title}</h3>
-                                        <p className={styles.segmentDescription}>{segment.description}</p>
-                                    </div>
-                                    {/* <Link href={`/segment/${segment.id}/${segment.slug}`} className={styles.segmentLink}>
-                                        Practice
-                                    </Link> */}
-                                </Link>
+                                <SegmentItem key={segment.id} segment={segment} />
                             ))}
                         </div>
                     </div>
@@ -74,5 +50,93 @@ const Edition: React.FC<Props> = (props: Props) => {
         </div>
     );
 };
+
+const SegmentItem: React.FC<{ segment: Segment }> = ({ segment }) => {
+    const isVideo = segment.type === "movie" || segment.type === "podcast";
+    // const isAudio = segment.type === "story";
+
+    const [isPlaying, setIsPlaying] = React.useState(false);
+
+    return (
+        <div key={segment.id} className={styles.segment}>
+            <div className={styles.imageContainer}>
+                <ReactPlayer
+                    className='react-player'
+                    // playing={true}
+                    controls={true}
+                    // playIcon={(<button>ddd</button>)}
+                    url={segment.video_file}
+                    width='358.9px'
+                    height='199.45px'
+                    config={{
+                        file: {
+                            tracks: [
+                                { kind: 'subtitles', src: '/media/subtitles.vtt', srcLang: 'en', default: true },
+                            ]
+                        }
+                    }}
+                />
+
+                {/* {isVideo && isPlaying && (
+                    <>
+                        <Image
+                            fill={true}
+                            // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            src={segment.cover_image}
+                            alt={segment.title}
+                            style={{ objectFit: "cover" }}
+                            // width={300}
+                            // height={200}
+                            className={styles.segmentImage}
+                        />
+
+                        <button className={styles.playButton}>
+                            <Image
+                                src="/media/play.svg"
+                                alt="Play"
+                                width={16}
+                                height={16}
+                                className={styles.playImage}
+                            />
+                        </button>
+                    </>
+                )}
+
+                {isVideo && !isPlaying && (
+                    <button
+                        onClick={() => setIsPlaying(true)}
+                        className={styles.playButton}
+                    >
+                        <Image
+                            src="/media/play.svg"
+                            alt="Play"
+                            width={16}
+                            height={16}
+                            className={styles.playImage}
+                        />
+                    </button>
+                )} */}
+
+                {/* <div className={styles.tags}>
+                    <div className={styles.tag}>
+                        <span className={`${styles.tagFlag} fi fi-gb`} />
+                        American English • 30s
+                    </div>
+                </div> */}
+            </div>
+            <Link href={`/segment/${segment.id}/${segment.slug}`} className={styles.segmentDetails}>
+                <div className={styles.segmentSubtitle}>
+                    <span className={`${styles.subtitleFlag} fi fi-gb`} />
+                    American English
+                </div>
+                <h3 className={styles.segmentTitle}>{segment.title}</h3>
+                <p className={styles.segmentDescription}>{segment.description}</p>
+            </Link>
+            {/* <Link href={`/segment/${segment.id}/${segment.slug}`} className={styles.segmentLink}>
+                Practice
+            </Link> */}
+        </div>
+    )
+}
 
 export default Edition;
