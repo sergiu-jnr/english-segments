@@ -12,3 +12,13 @@
     margin-top: 15px;
     opacity: 0.75;
 }
+
+@media (max-width: 680px) {
+    .title {
+        font-size: 36px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+}
