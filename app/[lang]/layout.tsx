@@ -6,17 +6,40 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "English Segments",
   description: "Speak English with confidence",
+  metadataBase: new URL('https://www.englishsegments.com/'),
+  openGraph: {
+    images: [
+      {
+        url: "https://www.englishsegments.com/logo.png",
+        width: 300,
+        height: 300,
+      },
+    ]
+  },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params
 }: Readonly<{
   children: React.ReactNode;
+  // params: {
+  //   lang: string;
+  // };
+  params: Promise<{ lang: "en" | "ro" }>;
 }>) {
+  const { lang } = await params
+
   return (
-    <html lang="en">
-       <head>
+    <html lang={lang}>
+      <head>
         <link rel="stylesheet" href="https://emoji-css.afeld.me/emoji.css" />
+        <link rel="icon" type="image/png" href="/media/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/media/favicon.svg" />
+        <link rel="shortcut icon" href="/media/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/media/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="English" />
+        <link rel="manifest" href="/media/site.webmanifest" />
         {/* <meta name="google-adsense-account" content="ca-pub-3923017048696264" />
         <Script id="adsense" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3352560740569043"
           crossOrigin="anonymous"></Script> */}

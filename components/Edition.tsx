@@ -76,77 +76,15 @@ const SegmentItem: React.FC<{ segment: Segment }> = ({ segment }) => {
                 videoSrc={segment.video_file}
                 posterSrc={segment.cover_image}
                 subtitleSrc={segment.subtitle_file}
-                title="Product Demonstration - Features Overview"
-                description="Watch our comprehensive walkthrough of key product features and benefits"
-                duration={duration} // ISO 8601 format
+                title={segment.title}
+                description={segment.description}
+                duration={duration} 
                 uploadDate={formattedDate}
-                width={358.9}
-                height={199.45}
+                width={483.9}
+                height={280}
             />
-
-                {/* <ReactPlayer
-                    className='react-player'
-                    controls={true}
-                    url={segment.video_file}
-                    width='358.9px'
-                    height='199.45px'
-                    config={{
-                        file: {
-                            tracks: [
-                                { kind: 'subtitles', src: '/media/subtitles.vtt', srcLang: 'en', default: true },
-                            ]
-                        }
-                    }}
-                /> */}
-
-                {/* {isVideo && isPlaying && (
-                    <>
-                        <Image
-                            fill={true}
-                            // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            src={segment.cover_image}
-                            alt={segment.title}
-                            style={{ objectFit: "cover" }}
-                            // width={300}
-                            // height={200}
-                            className={styles.segmentImage}
-                        />
-
-                        <button className={styles.playButton}>
-                            <Image
-                                src="/media/play.svg"
-                                alt="Play"
-                                width={16}
-                                height={16}
-                                className={styles.playImage}
-                            />
-                        </button>
-                    </>
-                )}
-
-                {isVideo && !isPlaying && (
-                    <button
-                        onClick={() => setIsPlaying(true)}
-                        className={styles.playButton}
-                    >
-                        <Image
-                            src="/media/play.svg"
-                            alt="Play"
-                            width={16}
-                            height={16}
-                            className={styles.playImage}
-                        />
-                    </button>
-                )} */}
-
-                {/* <div className={styles.tags}>
-                    <div className={styles.tag}>
-                        <span className={`${styles.tagFlag} fi fi-gb`} />
-                        American English • 30s
-                    </div>
-                </div> */}
             </div>
-            <Link href={`/segment/${segment.id}/${segment.slug}`} className={styles.segmentDetails}>
+            <Link href={`/${segment.slug}`} className={styles.segmentDetails}>
                 <div className={styles.segmentSubtitle}>
                     <span className={`${styles.subtitleFlag} fi fi-gb`} />
                     American English

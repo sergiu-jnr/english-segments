@@ -15,7 +15,7 @@ const Header: React.FC<Props> = (props: Props) => {
             <div className={styles.container}>
                 <div className={styles.leftSection}>
                     <Link href="/" className={styles.logoContainer}>
-                        <Image src="/logo.png" alt="Logo" width={50} height={50} />
+                        <Image src="/media/logo.png" alt="Logo" width={50} height={50} />
                         <span className={styles.logoText}>English Segments</span>
                     </Link>
 
