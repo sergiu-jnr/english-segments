@@ -19,6 +19,11 @@
         flex-direction: column;
         gap: 20px;
     }
+
+    .legal {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .legal {
