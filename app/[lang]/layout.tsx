@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "https://www.englishsegments.com/logo.png",
-        width: 300,
+        url: "https://www.englishsegments.com/cover.jpg",
+        width: 795,
         height: 300,
       },
     ]

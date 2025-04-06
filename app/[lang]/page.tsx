@@ -15,10 +15,19 @@ export async function generateMetadata(
   const { lang } = await params
 
   const dict = await getDictionary(lang)
- 
+
   return {
     title: dict.title,
-    description: dict.description, 
+    description: dict.description,
+    openGraph: {
+      images: [
+        {
+          url: "https://www.englishsegments.com/cover.jpg",
+          width: 795,
+          height: 300,
+        },
+      ]
+    },
   }
 }
 
