@@ -87,7 +87,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
           {subtitleSrc && (
             <track 
               kind="subtitles" 
-              src={`https://itb-nine.vercel.app/api/proxy?file=${encodeURIComponent(subtitleSrc)}`} 
+              src={subtitleSrc} 
               label="English" 
               srcLang="en" 
               default 
