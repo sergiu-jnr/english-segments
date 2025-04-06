@@ -63,6 +63,12 @@
     margin: 20px 0 40px 0;
 }
 
+@media (max-width: 680px) {
+    .segments {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
 .segment {
     background: #1e2939;
     border: 1px solid rgba(255, 255, 255, 0.1);

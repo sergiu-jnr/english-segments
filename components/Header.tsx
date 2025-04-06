@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./Header.module.css";
 import Link from "next/link";
 import languages from "@/constants/languages";
+import Script from "next/script";
 
 type Props = {
     page: string;
@@ -30,7 +31,8 @@ const Header: React.FC<Props> = (props: Props) => {
                         <span className={`fi ${language?.flag}`}></span> {language?.local_name}
                     </span>
                 </div>
-                <div className={styles.centerSection}>
+
+                <div id="mobile-section" className={styles.centerSection}>
                     <Link href="/movie-segments">
                         <span className={`${styles.navLink} ${page === 'phrases-from-movies' ? styles.active : ''}`}>{dict['movieSegments']}</span>
                     </Link>
@@ -47,6 +49,29 @@ const Header: React.FC<Props> = (props: Props) => {
                         <span className={`${styles.navLink} ${page === 'stories-for-speaking' ? styles.active : ''}`}>Stories for Speaking</span>
                     </Link> */}
                 </div>
+
+                <div className={styles.mobileSection}>
+                    <button id="toggle-button" className={styles.mobileButton}>
+                        <Image src="/media/menu.svg" alt="Menu" width={25} height={25} />
+                    </button>
+                </div>
+
+                <Script id="toggle-script" strategy="lazyOnload">
+                    {`
+                        const toggleButton = document.getElementById('toggle-button');
+                        const mobileSection = document.getElementById('mobile-section');
+
+                        if (toggleButton && mobileSection) {
+                        toggleButton.addEventListener('click', function () {
+                            if (mobileSection.style.display === 'none') {
+                            mobileSection.style.display = 'block';
+                            } else {
+                            mobileSection.style.display = 'none';
+                            }
+                        });
+                        }
+                    `}
+                </Script>
                 {/* <button className={styles.premiumButton}>
                     <Image src="/external-link.svg" alt="Go to the shop" width={15} height={15} />
                     TPR Kit for Speaking
