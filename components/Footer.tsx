@@ -8,7 +8,7 @@ type Params = {
 }
 
 const Footer: React.FC<Params> = ({ dict }) => {
-  console.log('dict', dict);
+  
   return (
     <div className={styles.footer}>
       <div className={styles.container}>
