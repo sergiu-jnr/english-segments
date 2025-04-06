@@ -35,6 +35,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   playsInline = true,
 }) => {
   const videoId = videoSrc.split('/').pop()?.split('.')[0] || 'default-video-id';
+  // const subtitleUrl = subtitleSrc?.replace('https://media.englishsegments.com', 'https://pub-8b8e1e7c1438487aac3cf54263c0f7bc.r2.dev')
   
   return (
     <>
@@ -86,7 +87,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
           {subtitleSrc && (
             <track 
               kind="subtitles" 
-              src={subtitleSrc} 
+              src={`https://itb-nine.vercel.app/api/proxy?file=${encodeURIComponent(subtitleSrc)}`} 
               label="English" 
               srcLang="en" 
               default 
