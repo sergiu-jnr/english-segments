@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import "@/node_modules/flag-icons/css/flag-icons.min.css";
 import Script from "next/script";
+import Lang from "@/types/lang";
 
 export const metadata: Metadata = {
   title: "English Segments",
@@ -23,10 +24,7 @@ export default async function RootLayout({
   params
 }: Readonly<{
   children: React.ReactNode;
-  // params: {
-  //   lang: string;
-  // };
-  params: Promise<{ lang: "en" | "ro" }>;
+  params: Promise<{ lang: Lang }>;
 }>) {
   const { lang } = await params
 

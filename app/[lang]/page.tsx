@@ -6,23 +6,23 @@ import Hero from "@/components/Hero";
 import languages from "@/constants/languages";
 import fetchSegments from "@/util/fetch-segments";
 import { getDictionary } from "./dictionaries";
+import Lang from "@/types/lang";
 
 export default async function Home({ params }: {
-  params: Promise<{ lang: "en" | "ro" }>
+  params: Promise<{ lang: Lang }>
 }) {
   const { lang } = await params
   const dict = await getDictionary(lang)
 
-  const segments = await fetchSegments(true, 'en')
+  const segments = await fetchSegments(true, lang)
 
-  // console.log(segments)
   return (
     <>
-      <Header page='/' />
-      <Hero title={dict['title']} description={dict['description']} />
-      <AvailableLanguages languages={languages} />
-      <Edition segments={segments} />
-      <Footer />
+      <Header dict={dict} lang={lang} page='/' />
+      <Hero dict={dict} />
+      <AvailableLanguages lang={lang} languages={languages} />
+      <Edition dict={dict} segments={segments} />
+      <Footer dict={dict} />
     </>
   );
 }

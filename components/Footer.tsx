@@ -3,38 +3,43 @@ import Image from "next/image";
 import styles from "./Footer.module.css";
 import Link from "next/link";
 
-const Footer: React.FC = () => {
+type Params = {
+  dict: Record<string, string>;
+}
+
+const Footer: React.FC<Params> = ({ dict }) => {
+  console.log('dict', dict);
   return (
     <div className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.text}>
-          <span>© 2025 English Segments. All rights reserved.</span>
+          <span>{dict['copyright']}</span>
         </div>
 
         <div className={styles.legal}>
           <Link href={'https://www.tiktok.com/'} className={styles.legalLink}>
-            <span>Terms of Use</span>
+            <span>{dict['termsAndConditions']}</span>
           </Link>
 
           <Link href={'https://www.instragram.com/'} className={styles.legalLink}>
-            <span>Privacy Policy</span>
+            <span>{dict['privacyPolicy']}</span>
           </Link>
         </div>
 
         <div className={styles.social}>
           <Link href={'https://www.youtube.com/'} className={styles.socialLink}>
             <Image src="/media/youtube.svg" alt="New English on Youtube" width={20} height={20} />
-            <span>Youtube</span>
+            <span>{dict['youtube']}</span>
           </Link>
 
           <Link href={'https://www.tiktok.com/'} className={styles.socialLink}>
             <Image src="/media/tiktok.svg" alt="New English on TikTok" width={20} height={20} />
-            <span>TikTok</span>
+            <span>{dict['tiktok']}</span>
           </Link>
 
           <Link href={'https://www.instragram.com/'} className={styles.socialLink}>
             <Image src="/media/instagram.svg" alt="New English on Instagram" width={20} height={20} />
-            <span>Instagram</span>
+            <span>{dict['instagram']}</span>
           </Link>
         </div>
       </div>

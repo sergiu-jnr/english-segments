@@ -1,4 +1,18 @@
 {
-    "title": "Vorbiți engleza cu încredere",
-    "description": "Platformă pentru exersarea limbii engleze vorbite."
+  "title": "Vorbiți engleza cu încredere",
+  "description": "Platformă pentru exersarea limbii engleze vorbite.",
+  "movieSegments": "Segmente de film",
+  "podcastSegments": "Segmente Podcast",
+  "storySegments": "Segmente de poveste",
+  "americanEnglish": "Engleză americană",
+  "britishEnglish": "Engleză britanică",
+  "blog": "Blog",
+  "seeAll": "Vezi toate",
+  "termsAndConditions": "Termeni și condiții",
+  "privacyPolicy": "Politica de confidențialitate",
+  "contactUs": "Contactați-ne",
+  "copyright": "© 2025 English Segments. Toate drepturile rezervate.",
+  "youtube": "YouTube",
+  "tiktok": "TikTok",
+  "instagram": "Instagram"
 }

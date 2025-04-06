@@ -2,10 +2,11 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { getDictionary } from "../dictionaries";
 import fetchSegment from "@/util/fetch-segment";
+import Lang from "@/types/lang";
 // import Hero from "@/components/Hero";
 
 export default async function Segment({ params }: {
-  params: Promise<{ lang: "en" | "ro", slug: string }>
+  params: Promise<{ lang: Lang, slug: string }>
 }) {
   const { slug, lang } = await params
   const dict = await getDictionary(lang)
@@ -16,9 +17,9 @@ export default async function Segment({ params }: {
 
   return (
     <>
-      <Header page="terms-of-use" />
+      <Header dict={dict} lang={lang} page="terms-of-use" />
       {/* <Hero /> */}
-      <Footer />
+      <Footer dict={dict} />
     </>
   );
 }

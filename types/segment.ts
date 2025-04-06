@@ -15,5 +15,6 @@ export default interface Segment {
     type: string
     group_identifier: string
     slug: string
+    english: string
     created_at: string
 }

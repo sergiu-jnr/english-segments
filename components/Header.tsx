@@ -2,13 +2,18 @@ import React from "react";
 import Image from "next/image";
 import styles from "./Header.module.css";
 import Link from "next/link";
+import languages from "@/constants/languages";
 
 type Props = {
     page: string;
+    lang: string;
+    dict: Record<string, string>;
 }
 
 const Header: React.FC<Props> = (props: Props) => {
-    const { page } = props;
+    const { dict, lang, page } = props;
+
+    const language = languages.find((one) => one.code === lang);
 
     return (
         <div className={styles.header}>
@@ -22,20 +27,20 @@ const Header: React.FC<Props> = (props: Props) => {
                     <span className={styles.languageDivider}>→</span>
 
                     <span className={styles.languageLabel}>
-                        <span className="fi fi-gb"></span> English
+                        <span className={`fi ${language?.flag}`}></span> {language?.local_name}
                     </span>
                 </div>
                 <div className={styles.centerSection}>
                     <Link href="/movie-segments">
-                        <span className={`${styles.navLink} ${page === 'phrases-from-movies' ? styles.active : ''}`}>Movie Segments</span>
+                        <span className={`${styles.navLink} ${page === 'phrases-from-movies' ? styles.active : ''}`}>{dict['movieSegments']}</span>
                     </Link>
 
                     <Link href="/podcast-segments">
-                        <span className={`${styles.navLink} ${page === 'podcast-segments' ? styles.active : ''}`}>Podcast Segments</span>
+                        <span className={`${styles.navLink} ${page === 'podcast-segments' ? styles.active : ''}`}>{dict['podcastSegments']}</span>
                     </Link>
 
                     <Link href="/story-segments">
-                        <span className={`${styles.navLink} ${page === 'story-segments' ? styles.active : ''}`}>Story Segments</span>
+                        <span className={`${styles.navLink} ${page === 'story-segments' ? styles.active : ''}`}>{dict['storySegments']}</span>
                     </Link>
 
                     {/* <Link href="/stories-for-speaking">

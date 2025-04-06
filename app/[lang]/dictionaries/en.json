@@ -1,4 +1,18 @@
 {
     "title": "Speak English with confidence",
-    "description": "Platform for practicing spoken English."
+    "description": "Platform for practicing spoken English.",
+    "movieSegments": "Movie Segments",
+    "podcastSegments": "Podcast Segments",
+    "storySegments": "Story Segments",
+    "americanEnglish": "American English",
+    "britishEnglish": "British English",
+    "blog": "Blog",
+    "seeAll": "See All",
+    "termsAndConditions": "Terms and Conditions",
+    "privacyPolicy": "Privacy Policy",
+    "contactUs": "Contact Us",
+    "copyright": "© 2025 English Segments. All rights reserved.",
+    "youtube": "YouTube",
+    "tiktok": "TikTok",
+    "instagram": "Instagram"
 }
