@@ -7,6 +7,20 @@ import languages from "@/constants/languages";
 import fetchSegments from "@/util/fetch-segments";
 import { getDictionary } from "./dictionaries";
 import Lang from "@/types/lang";
+import { Metadata, } from "next";
+
+export async function generateMetadata(
+  { params }: { params: Promise<{ lang: Lang }> }
+): Promise<Metadata> {
+  const { lang } = await params
+
+  const dict = await getDictionary(lang)
+ 
+  return {
+    title: dict.title,
+    description: dict.description, 
+  }
+}
 
 export default async function Home({ params }: {
   params: Promise<{ lang: Lang }>
