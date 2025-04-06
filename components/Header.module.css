@@ -54,6 +54,7 @@
     cursor: pointer;
     background: #52d1de;
     color: #101828;
+    white-space: nowrap;
 }
 
 .genderLabel {
