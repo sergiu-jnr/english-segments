@@ -4,9 +4,10 @@ import React from "react";
 import styles from "./Edition.module.css";
 import Segment from "@/types/segment";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 import categoryToTitle from "@/constants/categoryToTitle";
-import ReactPlayer from 'react-player'
+import VideoPlayer from "./VideoPlayer";
+// import ReactPlayer from 'react-player'
 
 type Props = {
     segments: Segment[]
@@ -52,19 +53,40 @@ const Edition: React.FC<Props> = (props: Props) => {
 };
 
 const SegmentItem: React.FC<{ segment: Segment }> = ({ segment }) => {
-    const isVideo = segment.type === "movie" || segment.type === "podcast";
+    // const isVideo = segment.type === "movie" || segment.type === "podcast";
     // const isAudio = segment.type === "story";
 
-    const [isPlaying, setIsPlaying] = React.useState(false);
+    // const [isPlaying, setIsPlaying] = React.useState(false);
+
+    const createdAt = new Date(segment.created_at);
+    
+    const formattedDate = createdAt.toLocaleDateString("en-US", {
+        month: "long",
+        day: "2-digit",
+        year: "numeric",
+    });
+    
+    const duration = "PT" + Math.floor(segment.audio_file.length / 60) + "M" + (segment.audio_file.length % 60) + "S";
 
     return (
         <div key={segment.id} className={styles.segment}>
             <div className={styles.imageContainer}>
-                <ReactPlayer
+
+            <VideoPlayer
+                videoSrc={segment.video_file}
+                posterSrc={segment.cover_image}
+                subtitleSrc={segment.subtitle_file}
+                title="Product Demonstration - Features Overview"
+                description="Watch our comprehensive walkthrough of key product features and benefits"
+                duration={duration} // ISO 8601 format
+                uploadDate={formattedDate}
+                width={358.9}
+                height={199.45}
+            />
+
+                {/* <ReactPlayer
                     className='react-player'
-                    // playing={true}
                     controls={true}
-                    // playIcon={(<button>ddd</button>)}
                     url={segment.video_file}
                     width='358.9px'
                     height='199.45px'
@@ -75,7 +97,7 @@ const SegmentItem: React.FC<{ segment: Segment }> = ({ segment }) => {
                             ]
                         }
                     }}
-                />
+                /> */}
 
                 {/* {isVideo && isPlaying && (
                     <>

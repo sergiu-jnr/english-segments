@@ -3,7 +3,8 @@ export default interface Segment {
     title: string
     description: string
     cover_image: string
-    video_file: string | null
+    video_file: string
+    subtitle_file: string
     audio_file: string
     category: string
     context: string

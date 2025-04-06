@@ -1,5 +1,5 @@
 .edition {
-    max-width: 1240px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 30px 30px;
 }
@@ -40,7 +40,7 @@
     font-weight: 600;
     display: flex;
     gap: 10px;
-    justify-content: center;
+    /* justify-content: center; */
     /* padding: 10px; */
     margin-bottom: 15px;
     z-index: 2;
@@ -56,7 +56,7 @@
 }
 
 .segments {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     display: grid;
     gap: 50px;
     flex: 1;
@@ -119,7 +119,7 @@
 }
 
 .segment h3 {
-    text-align: center;
+    /* text-align: center; */
     /* margin: 15px 20px 5px 20px; */
     font-size: 18px;
     flex: 1;
@@ -129,7 +129,7 @@
 .segment p {
     opacity: 0.6;
     /* margin: 5px 20px 30px 20px; */
-    text-align: center;
+    /* text-align: center; */
 }
 
 /* .segment a {
@@ -150,7 +150,7 @@
 
 .imageContainer {
     width: 100%;
-    height: 200px;
+    height: 280px;
     position: relative;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }

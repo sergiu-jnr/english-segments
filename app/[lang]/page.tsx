@@ -15,7 +15,7 @@ export default async function Home({ params }: {
 
   const segments = await fetchSegments(true, 'en')
 
-  console.log(segments)
+  // console.log(segments)
   return (
     <>
       <Header page='/' />
