@@ -20,7 +20,7 @@ interface VideoPlayerProps {
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({
   videoSrc,
-  subtitleSrc,
+  // subtitleSrc,
   posterSrc,
   title = 'Video content',
   description = 'Video player',
@@ -54,8 +54,8 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               duration: duration,
               contentUrl: videoSrc,
 
-              accessibilityFeature: ['captions'],
-              inLanguage: 'en',
+              // accessibilityFeature: ['captions'],
+              // inLanguage: 'en',
             }),
           }}
         />
@@ -84,7 +84,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         >
           <source src={videoSrc} type={`video/${videoSrc.split('.').pop()}`} />
 
-          {subtitleSrc && (
+          {/* {subtitleSrc && (
             <track 
               kind="subtitles" 
               src={subtitleSrc} 
@@ -92,7 +92,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               srcLang="en" 
               default 
             />
-          )}
+          )} */}
           Your browser does not support the video tag.
         </video>
       </div>
