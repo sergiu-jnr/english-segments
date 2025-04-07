@@ -4,6 +4,22 @@ import { getDictionary } from "../dictionaries";
 import fetchSegment from "@/util/fetch-segment";
 import Lang from "@/types/lang";
 import SegmentPage from "@/components/SegmentPage";
+import { Metadata } from "next";
+
+export async function generateMetadata({ params }: {
+  params: Promise<{ lang: Lang, slug: string }>
+}): Promise<Metadata> {
+  const { slug } = await params
+
+  const segment = await fetchSegment(slug)
+
+  return {
+    title: segment.title,
+    description: segment.description,
+  }
+}
+
+export const revalidate = 3600
 
 export default async function Segment({ params }: {
   params: Promise<{ lang: Lang, slug: string }>
@@ -13,11 +29,9 @@ export default async function Segment({ params }: {
 
   const segment = await fetchSegment(slug)
 
-  console.log(dict, segment)
-
   return (
     <>
-      <Header dict={dict} lang={lang} page="terms-of-use" />
+      <Header dict={dict} lang={lang} page={segment.slug} />
       <SegmentPage dict={dict} segment={segment} />
       <Footer dict={dict} />
     </>
