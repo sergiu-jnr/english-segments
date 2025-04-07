@@ -2,11 +2,12 @@ import React from "react";
 import styles from "./SegmentPage.module.css";
 import TypeSegment from "@/types/segment";
 import VideoPlayer from "./VideoPlayer";
-import Script from "next/script";
+// import Script from "next/script";
 import VolumePhrases from "./VolumePhrases";
 import VolumeRecordings from "./VolumeRecordings";
 import PlayPhrase from "./PlayPhrase";
 import RecordPhrase from "./RecordPhrase";
+import TranslationToggle from "./TranslationToggle";
 
 type Props = {
   dict: Record<string, string>;
@@ -28,6 +29,12 @@ const SegmentPage: React.FC<Props> = (props: Props) => {
   return (
     <div className={styles.segment}>
       <div className={styles.segmentDetails}>
+        {segment.english === 'american' &&
+          <div className={styles.segmentSubtitle}>
+            <span className={`${styles.subtitleFlag} fi fi-us`} />
+            {dict['americanEnglish']}
+          </div>
+        }
         <h1 className={styles.segmentTitle}>{segment.title}</h1>
         <h2 className={styles.segmentDescription}>{segment.description}</h2>
       </div>
@@ -67,7 +74,7 @@ const SegmentPage: React.FC<Props> = (props: Props) => {
               </div>
             )}
 
-          {segment.lang === "en" && (
+            {segment.lang === "en" && (
               <div className={styles.partText}>
                 <PlayPhrase audio={segment.audios[index]} />
                 <h3>{text}</h3>
@@ -82,37 +89,7 @@ const SegmentPage: React.FC<Props> = (props: Props) => {
           </div>
         ))}
 
-
-        <Script id="translation-toggle-script" strategy="lazyOnload">
-          {`
-const toggleButtons = document.querySelectorAll('.show-translation');
-
-    toggleButtons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        const parent = button.closest('div');
-        const targetParagraph = parent.querySelector('p');
-
-        if (targetParagraph) {
-          const isHidden = targetParagraph.style.display === 'none' || getComputedStyle(targetParagraph).display === 'none';
-
-          if (isHidden) {
-            targetParagraph.style.display = 'block';
-            const hideText = button.getAttribute('data-text-hide');
-            if (hideText) {
-              button.innerText = hideText;
-            }
-          } else {
-            targetParagraph.style.display = 'none';
-            const showText = button.getAttribute('data-text-show');
-            if (showText) {
-              button.innerText = showText;
-            }
-          }
-        }
-      });
-    });
-`}
-        </Script>
+        <TranslationToggle />
       </div>
     </div>
   );

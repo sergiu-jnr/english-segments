@@ -27,6 +27,34 @@
     max-width: 640px;
 }
 
+.segmentSubtitle {
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; */
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    gap: 10px;
+    /* justify-content: center; */
+    /* padding: 10px; */
+    margin-bottom: 15px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.subtitleFlag {
+    width: 22px;
+    height: 22px;
+    border-radius: 2px;
+    margin-top: -1px;
+    margin-right: 3px;
+}
+
 .segmentTitle {
     font-size: 28px;
     margin-bottom: 10px;
@@ -70,24 +98,24 @@
     }
 
     .partText {
-        width: 100%!important;
-        border-right: none!important;
-        border-bottom: none!important;
+        width: 100% !important;
+        border-right: none !important;
+        border-bottom: none !important;
         padding: 0 30px;
-        padding-top: 30px!important;
-        padding-bottom: 10px!important;
+        padding-top: 30px !important;
+        padding-bottom: 10px !important;
     }
 
     .partRecord {
-        padding-top: 0!important;
+        padding-top: 0 !important;
     }
 }
 
 
-    
+
 .segmentPart:last-of-type .partText,
 .segmentPart:last-of-type .partRecord {
-    border-bottom: none!important;
+    border-bottom: none !important;
 }
 
 .partText {
