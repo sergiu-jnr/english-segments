@@ -17,8 +17,8 @@ export async function generateMetadata(
   const dict = await getDictionary(lang)
 
   return {
-    title: "English Segments",
-    description: dict.title,
+    title: dict.title,
+    description: dict.description,
     openGraph: {
       images: [
         {
