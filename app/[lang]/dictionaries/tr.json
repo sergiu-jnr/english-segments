@@ -1,6 +1,6 @@
 {
-  "title": "Güvenle İngilizce konuşun",
-  "description": "Konuşma İngilizcesi pratiği için platform.",
+  "title": "Konuşma İngilizcesi pratiği için İngilizce segmentler",
+  "description": "Bir bölüme tıklayın, her cümleyi tek tek çalışın ve aksanınızı geliştirmek için sesinizi kaydedin.",
   "movieSegments": "Film Bölümleri",
   "podcastSegments": "Podcast Bölümleri",
   "storySegments": "Hikaye Bölümleri",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 English Segments. Tüm hakları saklıdır.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "İfadelerin ses seviyesi",
+  "recordingsVolume": "Kayıtların ses seviyesi",
+  "hideTranslation": "Çeviriyi gizle",
+  "showTranslation": "Çeviriyi göster",
+  "stopRecording": "Kaydı durdur",
+  "startRecording": "Kayda başla"
 }

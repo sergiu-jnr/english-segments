@@ -1,6 +1,6 @@
 {
-  "title": "Уверенно говорите по-английски",
-  "description": "Платформа для практики разговорного английского языка.",
+  "title": "Английские сегменты для отработки разговорного английского",
+  "description": "Нажимайте на фрагмент, изучайте каждую фразу по отдельности и записывайте свой голос, чтобы отработать акцент.",
   "movieSegments": "Сегменты фильма",
   "podcastSegments": "Сегменты подкаста",
   "storySegments": "Сегменты истории",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 English Segments. Все права защищены.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Громкость звучания фраз",
+  "recordingsVolume": "Громкость аудиозаписей",
+  "hideTranslation": "Скрыть перевод",
+  "showTranslation": "Показать перевод",
+  "stopRecording": "Остановить запись",
+  "startRecording": "Начало записи"
 }

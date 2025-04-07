@@ -1,6 +1,6 @@
 {
-  "title": "Falar inglês com confiança",
-  "description": "Plataforma para praticar o inglês falado.",
+  "title": "Segmentos de inglês para praticar o inglês falado",
+  "description": "Clique num segmento, estude cada frase individualmente e grave a sua voz para praticar a sua pronúncia.",
   "movieSegments": "Segmentos de filmes",
   "podcastSegments": "Segmentos de podcast",
   "storySegments": "Segmentos de histórias",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 English Segments. Todos os direitos reservados.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Volume áudio das frases",
+  "recordingsVolume": "Volume de áudio das gravações",
+  "hideTranslation": "Ocultar tradução",
+  "showTranslation": "Mostrar tradução",
+  "stopRecording": "Parar a gravação",
+  "startRecording": "Iniciar a gravação"
 }

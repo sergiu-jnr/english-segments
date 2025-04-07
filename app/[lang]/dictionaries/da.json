@@ -1,6 +1,6 @@
 {
-  "title": "Tal engelsk med selvtillid",
-  "description": "Platform til at øve talt engelsk.",
+  "title": "Engelske segmenter til at øve talt engelsk",
+  "description": "Klik på et segment, studer hver sætning for sig, og indspil din stemme for at øve din accent.",
   "movieSegments": "Filmsegmenter",
   "podcastSegments": "Podcast-segmenter",
   "storySegments": "Historiesegmenter",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 English Segments. Alle rettigheder forbeholdes.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Lydstyrke af sætninger",
+  "recordingsVolume": "Lydstyrke på optagelser",
+  "hideTranslation": "Skjul oversættelse",
+  "showTranslation": "Vis oversættelse",
+  "stopRecording": "Stop optagelsen",
+  "startRecording": "Start optagelse"
 }

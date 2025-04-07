@@ -1,6 +1,6 @@
 {
-  "title": "Hovorte po anglicky s istotou",
-  "description": "Platforma na precvičovanie hovorenej angličtiny.",
+  "title": "Anglické segmenty na precvičenie hovorenej angličtiny",
+  "description": "Kliknite na segment, preštudujte si každú frázu osobitne a nahrajte si hlas, aby ste si precvičili prízvuk.",
   "movieSegments": "Filmové segmenty",
   "podcastSegments": "Segmenty podcastu",
   "storySegments": "Segmenty príbehu",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 Anglické segmenty. Všetky práva vyhradené.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Hlasitosť zvukových fráz",
+  "recordingsVolume": "Hlasitosť zvukových nahrávok",
+  "hideTranslation": "Skryť preklad",
+  "showTranslation": "Zobraziť preklad",
+  "stopRecording": "Zastavenie nahrávania",
+  "startRecording": "Spustenie nahrávania"
 }

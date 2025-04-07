@@ -1,6 +1,6 @@
 {
-  "title": "自信を持って英語を話す",
-  "description": "英会話を練習するためのプラットフォーム。",
+  "title": "英会話を練習するための英語セグメント",
+  "description": "セグメントをクリックし、各フレーズを個別に学習し、アクセントを練習するために自分の声を録音する。",
   "movieSegments": "映画セグメント",
   "podcastSegments": "ポッドキャスト・セグメンツ",
   "storySegments": "ストーリー・セグメント",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 English Segments.無断複写・転載を禁じます。",
   "youtube": "ユーチューブ",
   "tiktok": "ティックトック",
-  "instagram": "インスタグラム"
+  "instagram": "インスタグラム",
+  "audiosVolume": "フレーズの音声ボリューム",
+  "recordingsVolume": "録音の音量",
+  "hideTranslation": "翻訳を隠す",
+  "showTranslation": "翻訳を表示",
+  "stopRecording": "録音停止",
+  "startRecording": "録音開始"
 }

@@ -1,6 +1,6 @@
 {
-  "title": "Räägi inglise keelt enesekindlalt",
-  "description": "Platvorm kõnekeele harjutamiseks.",
+  "title": "Inglise keele segmendid inglise keele harjutamiseks",
+  "description": "Klõpsake segmendil, õppige iga fraasi eraldi ja salvestage oma hääl, et harjutada aktsenti.",
   "movieSegments": "Filmi segmendid",
   "podcastSegments": "Podcasti segmendid",
   "storySegments": "Loo segmendid",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 English Segments. Kõik õigused kaitstud.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Fraaside helitugevus",
+  "recordingsVolume": "Helisalvestiste helitugevus",
+  "hideTranslation": "Peida tõlge",
+  "showTranslation": "Näita tõlget",
+  "stopRecording": "Lõpeta salvestamine",
+  "startRecording": "Alusta salvestamist"
 }

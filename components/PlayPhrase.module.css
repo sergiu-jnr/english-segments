@@ -1,0 +1,8 @@
+.button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 38px;
+    left: 25px;
+}

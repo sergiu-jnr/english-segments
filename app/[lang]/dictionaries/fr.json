@@ -1,6 +1,6 @@
 {
-  "title": "Parler anglais en toute confiance",
-  "description": "Plateforme pour la pratique de l'anglais oral.",
+  "title": "Segments d'anglais pour pratiquer l'anglais oral",
+  "description": "Cliquez sur un segment, étudiez chaque phrase individuellement et enregistrez votre voix pour pratiquer votre accent.",
   "movieSegments": "Segments de films",
   "podcastSegments": "Segments de podcast",
   "storySegments": "Segments d'histoire",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 English Segments. Tous droits réservés.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Volume audio des phrases",
+  "recordingsVolume": "Volume audio des enregistrements",
+  "hideTranslation": "Cacher la traduction",
+  "showTranslation": "Afficher la traduction",
+  "stopRecording": "Arrêter l'enregistrement",
+  "startRecording": "Démarrer l'enregistrement"
 }

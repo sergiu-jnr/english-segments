@@ -1,6 +1,6 @@
 {
-  "title": "Tala engelska med självförtroende",
-  "description": "Plattform för att träna talad engelska.",
+  "title": "Engelska segment för att träna talad engelska",
+  "description": "Klicka på ett segment, studera varje fras för sig och spela in din röst för att öva upp din accent.",
   "movieSegments": "Filmsegment",
   "podcastSegments": "Podcast-segment",
   "storySegments": "Berättelse Segment",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 English Segments. Alla rättigheter reserverade.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Ljudvolym för fraser",
+  "recordingsVolume": "Ljudvolym för inspelningar",
+  "hideTranslation": "Dölj översättning",
+  "showTranslation": "Visa översättning",
+  "stopRecording": "Stoppa inspelningen",
+  "startRecording": "Starta inspelningen"
 }

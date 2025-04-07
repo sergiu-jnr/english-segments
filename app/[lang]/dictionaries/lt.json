@@ -1,6 +1,6 @@
 {
-  "title": "Drąsiai kalbėkite angliškai",
-  "description": "Šnekamosios anglų kalbos pratybų platforma.",
+  "title": "Anglų kalbos segmentai šnekamajai anglų kalbai praktikuoti",
+  "description": "Spustelėkite segmentą, išstudijuokite kiekvieną frazę atskirai ir įrašykite savo balsą, kad galėtumėte praktikuoti akcentą.",
   "movieSegments": "Filmų segmentai",
   "podcastSegments": "Podkasto segmentai",
   "storySegments": "Istorijos segmentai",
@@ -12,7 +12,13 @@
   "privacyPolicy": "Privatumo politika",
   "contactUs": "Susisiekite su mumis",
   "copyright": "© 2025 Anglų kalba Segmentai. Visos teisės saugomos.",
-  "youtube": "\"YouTube\"",
+  "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "\"Instagram\""
+  "instagram": "Instagram",
+  "audiosVolume": "Frazių garso stiprumas",
+  "recordingsVolume": "Įrašų garso stiprumas",
+  "hideTranslation": "Paslėpti vertimą",
+  "showTranslation": "Rodyti vertimą",
+  "stopRecording": "Sustabdyti įrašymą",
+  "startRecording": "Įrašymo pradžia"
 }

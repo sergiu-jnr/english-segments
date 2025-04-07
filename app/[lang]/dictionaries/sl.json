@@ -1,6 +1,6 @@
 {
-  "title": "Samozavestno govorite angleško",
-  "description": "Platforma za vadbo govorjene angleščine.",
+  "title": "Angleški segmenti za vadbo govorjene angleščine",
+  "description": "Kliknite segment, preučite vsak stavek posebej in posnemite svoj glas ter vadite naglas.",
   "movieSegments": "Segmenti filmov",
   "podcastSegments": "Segmenti podkasta",
   "storySegments": "Segmenti zgodbe",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 Angleški segmenti. Vse pravice pridržane.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Glasnost zvoka stavkov",
+  "recordingsVolume": "Glasnost zvočnih posnetkov",
+  "hideTranslation": "Skrij prevod",
+  "showTranslation": "Prikaži prevod",
+  "stopRecording": "Ustavitev snemanja",
+  "startRecording": "Začetek snemanja"
 }

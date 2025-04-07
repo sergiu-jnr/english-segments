@@ -1,6 +1,6 @@
 {
-  "title": "Runājiet angliski droši",
-  "description": "Platforma sarunvalodas angļu valodas apguvei.",
+  "title": "Angļu valodas segmenti, lai praktizētu angļu valodas sarunvalodu",
+  "description": "Noklikšķiniet uz segmenta, izpētiet katru frāzi atsevišķi un ierakstiet savu balsi, lai vingrinātu akcentu.",
   "movieSegments": "Filmu segmenti",
   "podcastSegments": "Podkāsta segmenti",
   "storySegments": "Stāstu segmenti",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 Angļu valoda Segmenti. Visas tiesības aizsargātas.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Frāžu audio skaļums",
+  "recordingsVolume": "Ierakstu audio skaļums",
+  "hideTranslation": "Paslēpt tulkojumu",
+  "showTranslation": "Rādīt tulkojumu",
+  "stopRecording": "Pārtraukt ierakstīšanu",
+  "startRecording": "Ierakstīšanas sākšana"
 }

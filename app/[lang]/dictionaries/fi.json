@@ -1,6 +1,6 @@
 {
-  "title": "Puhu englantia itsevarmasti",
-  "description": "Alusta puhutun englannin harjoitteluun.",
+  "title": "Englanninkieliset segmentit puhutun englannin harjoitteluun",
+  "description": "Klikkaa segmenttiä, tutki jokaista lausetta erikseen ja nauhoita äänesi harjoitellaksesi aksenttiasi.",
   "movieSegments": "Elokuvan segmentit",
   "podcastSegments": "Podcast-segmentit",
   "storySegments": "Tarinaosuudet",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 English Segments. Kaikki oikeudet pidätetään.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Lauseiden äänenvoimakkuus",
+  "recordingsVolume": "Äänitteiden äänenvoimakkuus",
+  "hideTranslation": "Piilota käännös",
+  "showTranslation": "Näytä käännös",
+  "stopRecording": "Lopeta tallennus",
+  "startRecording": "Aloita tallennus"
 }

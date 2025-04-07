@@ -1,6 +1,6 @@
 {
-  "title": "Μιλήστε αγγλικά με αυτοπεποίθηση",
-  "description": "Πλατφόρμα για την εξάσκηση της προφορικής αγγλικής γλώσσας.",
+  "title": "Αγγλικά τμήματα για εξάσκηση στα προφορικά αγγλικά",
+  "description": "Κάντε κλικ σε ένα τμήμα, μελετήστε κάθε φράση ξεχωριστά και ηχογραφήστε τη φωνή σας για να εξασκηθείτε στην προφορά σας.",
   "movieSegments": "Τμήματα ταινιών",
   "podcastSegments": "Τμήματα Podcast",
   "storySegments": "Τμήματα ιστορίας",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 English Segments. Όλα τα δικαιώματα διατηρούνται.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Ένταση ήχου των φράσεων",
+  "recordingsVolume": "Ένταση ήχου των ηχογραφήσεων",
+  "hideTranslation": "Απόκρυψη μετάφρασης",
+  "showTranslation": "Εμφάνιση μετάφρασης",
+  "stopRecording": "Διακοπή εγγραφής",
+  "startRecording": "Έναρξη εγγραφής"
 }

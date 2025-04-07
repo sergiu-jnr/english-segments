@@ -1,6 +1,6 @@
 {
-  "title": "자신 있게 영어 말하기",
-  "description": "영어 말하기 연습을 위한 플랫폼입니다.",
+  "title": "구어체 영어 연습을 위한 영어 세그먼트",
+  "description": "세그먼트를 클릭하고 각 구문을 개별적으로 학습한 후 목소리를 녹음하여 억양을 연습하세요.",
   "movieSegments": "동영상 세그먼트",
   "podcastSegments": "팟캐스트 세그먼트",
   "storySegments": "스토리 세그먼트",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 영어 세그먼트. 모든 권리 보유.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "인스타그램"
+  "instagram": "인스타그램",
+  "audiosVolume": "문구의 오디오 볼륨",
+  "recordingsVolume": "녹음의 오디오 볼륨",
+  "hideTranslation": "번역 숨기기",
+  "showTranslation": "번역 표시",
+  "stopRecording": "녹화 중지",
+  "startRecording": "녹화 시작"
 }

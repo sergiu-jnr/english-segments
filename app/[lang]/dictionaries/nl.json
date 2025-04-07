@@ -1,6 +1,6 @@
 {
-  "title": "Spreek Engels met vertrouwen",
-  "description": "Platform voor het oefenen van gesproken Engels.",
+  "title": "Engelse segmenten om gesproken Engels te oefenen",
+  "description": "Klik op een segment, bestudeer elke zin afzonderlijk en neem je stem op om je accent te oefenen.",
   "movieSegments": "Filmsegmenten",
   "podcastSegments": "Podcast segmenten",
   "storySegments": "Verhaal Segmenten",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 English Segments. Alle rechten voorbehouden.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Audiovolume van zinnen",
+  "recordingsVolume": "Audiovolume van opnamen",
+  "hideTranslation": "Verberg vertaling",
+  "showTranslation": "Vertaling tonen",
+  "stopRecording": "Opname stoppen",
+  "startRecording": "Opname starten"
 }

@@ -1,6 +1,6 @@
 {
-  "title": "Mów po angielsku z pewnością siebie",
-  "description": "Platforma do ćwiczenia mówionego języka angielskiego.",
+  "title": "Segmenty języka angielskiego do ćwiczenia mówienia po angielsku",
+  "description": "Kliknij segment, przestudiuj każdą frazę z osobna i nagraj swój głos, aby poćwiczyć akcent.",
   "movieSegments": "Segmenty filmowe",
   "podcastSegments": "Odcinki podcastu",
   "storySegments": "Segmenty opowieści",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 English Segments. Wszelkie prawa zastrzeżone.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Głośność dźwięku fraz",
+  "recordingsVolume": "Głośność dźwięku nagrań",
+  "hideTranslation": "Ukryj tłumaczenie",
+  "showTranslation": "Pokaż tłumaczenie",
+  "stopRecording": "Zatrzymaj nagrywanie",
+  "startRecording": "Rozpocznij nagrywanie"
 }

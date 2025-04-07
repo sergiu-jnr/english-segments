@@ -1,6 +1,6 @@
 {
-  "title": "Vorbiți engleza cu încredere",
-  "description": "Platformă pentru exersarea limbii engleze vorbite.",
+  "title": "Segmente de engleză pentru a exersa engleza vorbită",
+  "description": "Faceți clic pe un segment, studiați fiecare frază în parte și înregistrați-vă vocea pentru a vă exersa accentul.",
   "movieSegments": "Segmente de film",
   "podcastSegments": "Segmente Podcast",
   "storySegments": "Segmente de poveste",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 English Segments. Toate drepturile rezervate.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Volumul audio al frazelor",
+  "recordingsVolume": "Volumul audio al înregistrărilor",
+  "hideTranslation": "Ascundeți traducerea",
+  "showTranslation": "Arată traducerea",
+  "stopRecording": "Opriți înregistrarea",
+  "startRecording": "Începeți înregistrarea"
 }

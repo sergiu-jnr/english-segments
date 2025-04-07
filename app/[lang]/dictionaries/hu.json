@@ -1,6 +1,6 @@
 {
-  "title": "Beszéljen magabiztosan angolul",
-  "description": "Platform a beszélt angol gyakorlásához.",
+  "title": "Angol szegmensek a beszélt angol gyakorlásához",
+  "description": "Kattintson egy szegmensre, tanulmányozzon minden egyes mondatot külön-külön, és vegye fel a hangját, hogy gyakorolhassa az akcentusát.",
   "movieSegments": "Filmszegmensek",
   "podcastSegments": "Podcast szegmensek",
   "storySegments": "Történet szegmensek",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 angol nyelvű szegmensek. Minden jog fenntartva.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "A mondatok hangereje",
+  "recordingsVolume": "A felvételek hangereje",
+  "hideTranslation": "Fordítás elrejtése",
+  "showTranslation": "Fordítás megjelenítése",
+  "stopRecording": "Felvétel leállítása",
+  "startRecording": "Felvétel indítása"
 }

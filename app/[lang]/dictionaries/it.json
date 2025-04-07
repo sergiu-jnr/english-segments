@@ -1,6 +1,6 @@
 {
-  "title": "Parlare inglese con sicurezza",
-  "description": "Piattaforma per la pratica dell'inglese parlato.",
+  "title": "Segmenti di inglese per esercitarsi nell'inglese parlato",
+  "description": "Cliccate su un segmento, studiate ogni frase singolarmente e registrate la vostra voce per esercitarvi sull'accento.",
   "movieSegments": "Segmenti di film",
   "podcastSegments": "Segmenti del podcast",
   "storySegments": "Segmenti della storia",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 English Segments. Tutti i diritti riservati.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Volume audio delle frasi",
+  "recordingsVolume": "Volume audio delle registrazioni",
+  "hideTranslation": "Nascondi traduzione",
+  "showTranslation": "Mostra la traduzione",
+  "stopRecording": "Interrompere la registrazione",
+  "startRecording": "Avvio della registrazione"
 }

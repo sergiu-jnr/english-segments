@@ -1,6 +1,6 @@
 {
-  "title": "Snakk engelsk med selvtillit",
-  "description": "Plattform for å øve på muntlig engelsk.",
+  "title": "Engelske segmenter for å øve på muntlig engelsk",
+  "description": "Klikk på et segment, studer hver setning for seg, og ta opp stemmen din for å øve på aksenten din.",
   "movieSegments": "Filmsegmenter",
   "podcastSegments": "Podcast-segmenter",
   "storySegments": "Historiesegmenter",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 English Segments. Alle rettigheter forbeholdt.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Lydvolum på fraser",
+  "recordingsVolume": "Lydvolumet på opptakene",
+  "hideTranslation": "Skjul oversettelse",
+  "showTranslation": "Vis oversettelse",
+  "stopRecording": "Stopp innspillingen",
+  "startRecording": "Start opptak"
 }

@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import "@/node_modules/flag-icons/css/flag-icons.min.css";
+import 'rc-slider/assets/index.css';
 import Script from "next/script";
 import Lang from "@/types/lang";
+import Favicon from "../../public/media/favicon.ico"
 
 export const metadata: Metadata = {
   title: "English Segments",
   description: "Speak English with confidence",
   metadataBase: new URL('https://www.englishsegments.com/'),
+  icons: [{ rel: "icon", url: Favicon.src }],
   openGraph: {
     images: [
       {

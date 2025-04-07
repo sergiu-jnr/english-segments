@@ -1,6 +1,6 @@
 {
-  "title": "Sprechen Sie Englisch mit Selbstvertrauen",
-  "description": "Plattform zum Üben von gesprochenem Englisch.",
+  "title": "Englische Segmente zum Üben von gesprochenem Englisch",
+  "description": "Klicken Sie auf ein Segment, lernen Sie jeden Satz einzeln und nehmen Sie Ihre Stimme auf, um Ihren Akzent zu üben.",
   "movieSegments": "Filmsegmente",
   "podcastSegments": "Podcast-Segmente",
   "storySegments": "Story-Segmente",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 Englische Segmente. Alle Rechte vorbehalten.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Lautstärke der Phrasen",
+  "recordingsVolume": "Lautstärke der Aufnahmen",
+  "hideTranslation": "Übersetzung ausblenden",
+  "showTranslation": "Übersetzung anzeigen",
+  "stopRecording": "Aufnahme stoppen",
+  "startRecording": "Aufnahme starten"
 }

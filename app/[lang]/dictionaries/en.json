@@ -1,6 +1,6 @@
 {
-    "title": "Speak English with confidence",
-    "description": "Platform for practicing spoken English.",
+    "title": "English segments to practise spoken English",
+    "description": "Click on a segment, study each phrase individually, and record your voice to practice your accent.",
     "movieSegments": "Movie Segments",
     "podcastSegments": "Podcast Segments",
     "storySegments": "Story Segments",
@@ -14,5 +14,11 @@
     "copyright": "© 2025 English Segments. All rights reserved.",
     "youtube": "YouTube",
     "tiktok": "TikTok",
-    "instagram": "Instagram"
+    "instagram": "Instagram",
+    "audiosVolume": "Audio volume of phrases",
+    "recordingsVolume": "Audio volume of recordings",
+    "hideTranslation": "Hide translation",
+    "showTranslation": "Show translation",
+    "stopRecording": "Stop recording",
+    "startRecording": "Start recording"
 }

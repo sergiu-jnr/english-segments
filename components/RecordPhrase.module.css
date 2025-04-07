@@ -1,0 +1,21 @@
+.button {
+  height: 30px;
+  width: 100%;
+  border-radius: 100px;
+  border: none;
+  background: #52d1de;
+  color: #101828;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.audio {
+  background: white;
+  border-radius: 100px;
+  margin-top: 10px;
+  height: 32.5px;
+  width: 100%;
+}

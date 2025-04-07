@@ -1,6 +1,6 @@
 {
-  "title": "Hablar inglés con confianza",
-  "description": "Plataforma para practicar el inglés hablado.",
+  "title": "Segmentos en inglés para practicar el inglés hablado",
+  "description": "Haz clic en un segmento, estudia cada frase individualmente y graba tu voz para practicar tu acento.",
   "movieSegments": "Segmentos de películas",
   "podcastSegments": "Segmentos de podcast",
   "storySegments": "Segmentos de la historia",
@@ -14,5 +14,11 @@
   "copyright": "2025 English Segments. Todos los derechos reservados.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Volumen de audio de las frases",
+  "recordingsVolume": "Volumen de audio de las grabaciones",
+  "hideTranslation": "Ocultar traducción",
+  "showTranslation": "Mostrar traducción",
+  "stopRecording": "Detener la grabación",
+  "startRecording": "Iniciar grabación"
 }

@@ -10,6 +10,7 @@ export default interface Segment {
     context: string
     source: string
     texts: string[]
+    english_texts?: string[]
     audios: string[]
     lang: string
     type: string

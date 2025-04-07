@@ -5,7 +5,7 @@ from translate_text import translate_text  # Assuming this is the module with yo
 
 def translate_json_files():
     # Get all JSON files in the current directory
-    json_files = glob.glob("fr.json")
+    json_files = glob.glob("*.json")
     
     # Process each JSON file
     for json_file in json_files:
@@ -23,9 +23,18 @@ def translate_json_files():
         with open(json_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
+        keys_to_process = [
+            "title",
+            "description"
+        ]
+        
         # Translate each value in the JSON
         translated_data = {}
         for key, value in data.items():
+            # Skip keys that are not in the list
+            if key not in keys_to_process:
+                translated_data[key] = value
+                continue
             # Translate the value from English to the target language
             translated_value = translate_text(target_lang, value)
             translated_data[key] = translated_value

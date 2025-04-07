@@ -20,7 +20,7 @@ const Header: React.FC<Props> = (props: Props) => {
         <div className={styles.header}>
             <div className={styles.container}>
                 <div className={styles.leftSection}>
-                    <Link href="/" className={styles.logoContainer}>
+                    <Link href={`/${lang}`} className={styles.logoContainer}>
                         <Image src="/media/logo.png" alt="Logo" width={50} height={50} />
                         <span className={styles.logoText}>English Segments</span>
                     </Link>
@@ -33,15 +33,15 @@ const Header: React.FC<Props> = (props: Props) => {
                 </div>
 
                 <div id="mobile-section" className={styles.centerSection}>
-                    <Link href="/movie-segments">
+                    <Link href={`/${lang}/movie-segments`}>
                         <span className={`${styles.navLink} ${page === 'phrases-from-movies' ? styles.active : ''}`}>{dict['movieSegments']}</span>
                     </Link>
 
-                    <Link href="/podcast-segments">
+                    <Link href={`/${lang}/podcast-segments`}>
                         <span className={`${styles.navLink} ${page === 'podcast-segments' ? styles.active : ''}`}>{dict['podcastSegments']}</span>
                     </Link>
 
-                    <Link href="/story-segments">
+                    <Link href={`/${lang}/story-segments`}>
                         <span className={`${styles.navLink} ${page === 'story-segments' ? styles.active : ''}`}>{dict['storySegments']}</span>
                     </Link>
 
@@ -63,7 +63,9 @@ const Header: React.FC<Props> = (props: Props) => {
 
                         if (toggleButton && mobileSection) {
                         toggleButton.addEventListener('click', function () {
-                            if (mobileSection.style.display === 'none') {
+                            const isVisible = window.getComputedStyle(mobileSection).display !== 'none';
+
+                            if (!isVisible) {
                             mobileSection.style.display = 'block';
                             } else {
                             mobileSection.style.display = 'none';

@@ -66,7 +66,6 @@ const SegmentItem: React.FC<{
     return (
         <div key={segment.id} className={styles.segment}>
             <div className={styles.imageContainer}>
-
                 <VideoPlayer
                     videoSrc={segment.video_file}
                     posterSrc={segment.cover_image}
@@ -79,7 +78,7 @@ const SegmentItem: React.FC<{
                     height={280}
                 />
             </div>
-            <Link href={`/${segment.slug}`} className={styles.segmentDetails}>
+            <Link href={`/${segment.lang}/${segment.slug}`} className={styles.segmentDetails}>
                 {segment.english === 'american' &&
                     <div className={styles.segmentSubtitle}>
                         <span className={`${styles.subtitleFlag} fi fi-us`} />

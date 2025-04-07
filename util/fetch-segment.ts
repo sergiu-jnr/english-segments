@@ -2,13 +2,15 @@ import Segment from "@/types/segment";
 
 export default async function fetchSegment(
     slug: string
-  ): Promise<Segment[]> {
+  ): Promise<Segment> {
     const baseUrl = "https://itb-nine.vercel.app/api/segments";
     const params = new URLSearchParams({
       slug,
     });
   
     const url = `${baseUrl}?${params.toString()}`;
+
+    console.log(url)
   
     try {
       const response = await fetch(url);

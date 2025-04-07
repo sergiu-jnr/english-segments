@@ -1,6 +1,6 @@
 {
-  "title": "Berbicara bahasa Inggris dengan percaya diri",
-  "description": "Platform untuk berlatih bahasa Inggris lisan.",
+  "title": "Segmen bahasa Inggris untuk melatih bahasa Inggris lisan",
+  "description": "Klik pada sebuah segmen, pelajari setiap frasa satu per satu, dan rekam suara Anda untuk melatih aksen Anda.",
   "movieSegments": "Segmen Film",
   "podcastSegments": "Segmen Podcast",
   "storySegments": "Segmen Cerita",
@@ -14,5 +14,11 @@
   "copyright": "© 2025 Segmen Bahasa Inggris. Semua hak cipta dilindungi undang-undang.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Volume audio frasa",
+  "recordingsVolume": "Volume audio rekaman",
+  "hideTranslation": "Sembunyikan terjemahan",
+  "showTranslation": "Tampilkan terjemahan",
+  "stopRecording": "Berhenti merekam",
+  "startRecording": "Mulai merekam"
 }
