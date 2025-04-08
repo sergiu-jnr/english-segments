@@ -116,6 +116,17 @@
     cursor: pointer;
 }
 
+.mobileSection button img {
+    display: block;
+    margin: auto;
+}
+
+@media (prefers-color-scheme: light) {
+    .mobileSection button {
+        background: #101828;
+    }
+}
+
 .mobileSection .image {
     display: block;
     margin: auto;
