@@ -2,6 +2,12 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+@media (prefers-color-scheme: light) {
+    .header {
+        border-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
 .container {
     max-width: 1240px;
     margin: 0 auto;
@@ -19,6 +25,12 @@
     padding-top: 5px;
     padding-bottom: 5px;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (prefers-color-scheme: light) {
+    .leftSection {
+        border-color: rgba(0, 0, 0, 0.1);
+    }
 }
 
 .logoContainer {

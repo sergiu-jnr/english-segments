@@ -4,6 +4,12 @@
     padding: 20px 0;
 }
 
+@media (prefers-color-scheme: light) {
+    .footer {
+        border-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
 .container {
     max-width: 1240px;
     margin: 0 auto;

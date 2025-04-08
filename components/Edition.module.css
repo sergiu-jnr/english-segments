@@ -21,6 +21,12 @@
     gap: 6px;
 }
 
+@media (prefers-color-scheme: light) {
+    .categoryTitle {
+        color: #000;
+    }
+}
+
 .categoryLink {
     text-decoration: underline;
     /* font-size: 12px; */
@@ -84,6 +90,17 @@
 
 .segmentDetails:hover {
     background: #18212e;
+}
+
+@media (prefers-color-scheme: light) {
+    .segment {
+        background: #f6f6f6;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .segmentDetails:hover {
+        background: #e6e5e5;
+    }
 }
 
 /* .imageContainer:hover {

@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./Header.module.css";
 import Link from "next/link";
 import languages from "@/constants/languages";
-import Script from "next/script";
+import MobileToggle from "./MobileToggle";
 
 type Props = {
     page: string;
@@ -56,24 +56,7 @@ const Header: React.FC<Props> = (props: Props) => {
                     </button>
                 </div>
 
-                <Script id="toggle-script" strategy="lazyOnload">
-                    {`
-                        const toggleButton = document.getElementById('toggle-button');
-                        const mobileSection = document.getElementById('mobile-section');
-
-                        if (toggleButton && mobileSection) {
-                        toggleButton.addEventListener('click', function () {
-                            const isVisible = window.getComputedStyle(mobileSection).display !== 'none';
-
-                            if (!isVisible) {
-                            mobileSection.style.display = 'block';
-                            } else {
-                            mobileSection.style.display = 'none';
-                            }
-                        });
-                        }
-                    `}
-                </Script>
+                <MobileToggle />
                 {/* <button className={styles.premiumButton}>
                     <Image src="/external-link.svg" alt="Go to the shop" width={15} height={15} />
                     TPR Kit for Speaking
