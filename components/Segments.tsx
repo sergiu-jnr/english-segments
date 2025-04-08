@@ -82,6 +82,12 @@ const SegmentItem: React.FC<{
                         {dict['americanEnglish']}
                     </div>
                 }
+                {segment.english === 'british' &&
+                    <div className={styles.segmentSubtitle}>
+                        <span className={`${styles.subtitleFlag} fi fi-gb`} />
+                        {dict['britishEnglish']}
+                    </div>
+                }
                 <h3 className={styles.segmentTitle}>{segment.title}</h3>
                 <p className={styles.segmentDescription}>{segment.description}</p>
             </Link>

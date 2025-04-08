@@ -35,6 +35,12 @@ const SegmentPage: React.FC<Props> = (props: Props) => {
             {dict['americanEnglish']}
           </div>
         }
+        {segment.english === 'british' &&
+          <div className={styles.segmentSubtitle}>
+            <span className={`${styles.subtitleFlag} fi fi-gb`} />
+            {dict['britishEnglish']}
+          </div>
+        }
         <h1 className={styles.segmentTitle}>{segment.title}</h1>
         <h2 className={styles.segmentDescription}>{segment.description}</h2>
       </div>
