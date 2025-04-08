@@ -20,5 +20,9 @@
   "hideTranslation": "Skjul oversættelse",
   "showTranslation": "Vis oversættelse",
   "stopRecording": "Stop optagelsen",
-  "startRecording": "Start optagelse"
+  "startRecording": "Start optagelse",
+  "work": "På arbejdspladsen / med kolleger",
+  "home": "Hjemme/med familie og venner",
+  "partner": "I et forhold / med en partner",
+  "city": "I byen / med fremmede"
 }

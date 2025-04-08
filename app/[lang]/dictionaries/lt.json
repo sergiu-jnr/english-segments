@@ -20,5 +20,9 @@
   "hideTranslation": "Paslėpti vertimą",
   "showTranslation": "Rodyti vertimą",
   "stopRecording": "Sustabdyti įrašymą",
-  "startRecording": "Įrašymo pradžia"
+  "startRecording": "Įrašymo pradžia",
+  "work": "Darbo vietoje / su kolegomis",
+  "home": "Namuose / su šeima ir draugais",
+  "partner": "Santykiai / su partneriu",
+  "city": "Mieste / su nepažįstamaisiais"
 }

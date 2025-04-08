@@ -24,8 +24,10 @@ def translate_json_files():
             data = json.load(f)
         
         keys_to_process = [
-            "title",
-            "description"
+            "work",
+            "home",
+            "partner",
+            "city"
         ]
         
         # Translate each value in the JSON

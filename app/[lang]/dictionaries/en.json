@@ -20,5 +20,9 @@
     "hideTranslation": "Hide translation",
     "showTranslation": "Show translation",
     "stopRecording": "Stop recording",
-    "startRecording": "Start recording"
+    "startRecording": "Start recording",
+    "work": "At workplace / with colleagues",
+    "home": "At home / with family, and friends",
+    "partner": "In a relationship / with partner",
+    "city": "In the city / with strangers"
 }

@@ -20,5 +20,9 @@
   "hideTranslation": "翻訳を隠す",
   "showTranslation": "翻訳を表示",
   "stopRecording": "録音停止",
-  "startRecording": "録音開始"
+  "startRecording": "録音開始",
+  "work": "職場で／同僚と",
+  "home": "自宅で／家族や友人と",
+  "partner": "交際中／パートナーがいる",
+  "city": "街で／見知らぬ人と"
 }

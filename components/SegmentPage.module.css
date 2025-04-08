@@ -10,7 +10,13 @@
     border-radius: 6px;
     overflow: hidden;
     position: relative;
-    height: 500px;
+    height: 600px;
+}
+
+@media (max-width: 680px) {
+    .segmentVideo {
+        height: 300px;
+    }
 }
 
 @media (prefers-color-scheme: light) {

@@ -20,5 +20,9 @@
   "hideTranslation": "Çeviriyi gizle",
   "showTranslation": "Çeviriyi göster",
   "stopRecording": "Kaydı durdur",
-  "startRecording": "Kayda başla"
+  "startRecording": "Kayda başla",
+  "work": "İşyerinde / meslektaşlarla",
+  "home": "Evde / aile ve arkadaşlarla",
+  "partner": "Bir ilişki içinde / partnerle",
+  "city": "Şehirde / yabancılarla"
 }

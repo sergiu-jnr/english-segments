@@ -31,7 +31,7 @@ const Edition: React.FC<Props> = (props: Props) => {
                         <h3 className={styles.categoryTitle}>
                             {dict[categoryToTitle[category]]} •
 
-                            <Link href={`/movie-segments`} className={styles.categoryLink}>
+                            <Link href={`${categorySegments[0]['lang']}/segments/${category}`} className={styles.categoryLink}>
                                 {dict['seeAll']}
                             </Link>
                         </h3>

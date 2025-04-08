@@ -33,16 +33,16 @@ const Header: React.FC<Props> = (props: Props) => {
                 </div>
 
                 <div id="mobile-section" className={styles.centerSection}>
-                    <Link href={`/${lang}/movie-segments`}>
-                        <span className={`${styles.navLink} ${page === 'phrases-from-movies' ? styles.active : ''}`}>{dict['movieSegments']}</span>
+                    <Link href={`/${lang}/segments/movie`}>
+                        <span className={`${styles.navLink} ${page === 'segments/movie' ? styles.active : ''}`}>{dict['movieSegments']}</span>
                     </Link>
 
-                    <Link href={`/${lang}/podcast-segments`}>
-                        <span className={`${styles.navLink} ${page === 'podcast-segments' ? styles.active : ''}`}>{dict['podcastSegments']}</span>
+                    <Link href={`/${lang}/segments/podcast`}>
+                        <span className={`${styles.navLink} ${page === 'segments/podcast' ? styles.active : ''}`}>{dict['podcastSegments']}</span>
                     </Link>
 
-                    <Link href={`/${lang}/story-segments`}>
-                        <span className={`${styles.navLink} ${page === 'story-segments' ? styles.active : ''}`}>{dict['storySegments']}</span>
+                    <Link href={`/${lang}/segments/story`}>
+                        <span className={`${styles.navLink} ${page === 'segments/story' ? styles.active : ''}`}>{dict['storySegments']}</span>
                     </Link>
 
                     {/* <Link href="/stories-for-speaking">

@@ -20,5 +20,9 @@
   "hideTranslation": "Piilota käännös",
   "showTranslation": "Näytä käännös",
   "stopRecording": "Lopeta tallennus",
-  "startRecording": "Aloita tallennus"
+  "startRecording": "Aloita tallennus",
+  "work": "Työpaikalla / työtovereiden kanssa",
+  "home": "Kotona / perheen ja ystävien kanssa",
+  "partner": "Parisuhteessa / kumppanin kanssa",
+  "city": "Kaupungissa / vieraiden kanssa"
 }

@@ -20,5 +20,9 @@
   "hideTranslation": "Skrij prevod",
   "showTranslation": "Prikaži prevod",
   "stopRecording": "Ustavitev snemanja",
-  "startRecording": "Začetek snemanja"
+  "startRecording": "Začetek snemanja",
+  "work": "Na delovnem mestu / s sodelavci",
+  "home": "Doma / z družino in prijatelji",
+  "partner": "V razmerju / s partnerjem",
+  "city": "V mestu / z neznanci"
 }

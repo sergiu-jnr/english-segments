@@ -20,5 +20,9 @@
   "hideTranslation": "Skryť preklad",
   "showTranslation": "Zobraziť preklad",
   "stopRecording": "Zastavenie nahrávania",
-  "startRecording": "Spustenie nahrávania"
+  "startRecording": "Spustenie nahrávania",
+  "work": "Na pracovisku / s kolegami",
+  "home": "Doma / s rodinou a priateľmi",
+  "partner": "Vo vzťahu / s partnerom",
+  "city": "V meste / s cudzincami"
 }

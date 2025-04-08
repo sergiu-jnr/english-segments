@@ -20,5 +20,9 @@
   "hideTranslation": "Peida tõlge",
   "showTranslation": "Näita tõlget",
   "stopRecording": "Lõpeta salvestamine",
-  "startRecording": "Alusta salvestamist"
+  "startRecording": "Alusta salvestamist",
+  "work": "Töökohal / kolleegidega",
+  "home": "Kodus / koos pere ja sõpradega",
+  "partner": "Suhtes / koos partneriga",
+  "city": "Linnas / võõrastega"
 }

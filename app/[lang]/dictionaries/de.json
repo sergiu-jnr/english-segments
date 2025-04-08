@@ -20,5 +20,9 @@
   "hideTranslation": "Übersetzung ausblenden",
   "showTranslation": "Übersetzung anzeigen",
   "stopRecording": "Aufnahme stoppen",
-  "startRecording": "Aufnahme starten"
+  "startRecording": "Aufnahme starten",
+  "work": "Am Arbeitsplatz / mit Kollegen",
+  "home": "Zu Hause / mit Familie und Freunden",
+  "partner": "In einer Beziehung / mit Partner",
+  "city": "In der Stadt / bei Fremden"
 }

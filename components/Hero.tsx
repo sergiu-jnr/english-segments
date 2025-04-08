@@ -3,14 +3,16 @@ import styles from "./Hero.module.css";
 
 type Params = {
   dict: Record<string, string>;
+  title?: string;
+  description?: string;
 }
 
 const Hero: React.FC<Params> = (props: Params) => {
-  const { dict } = props;
+  const { title, description, dict } = props;
   return (
     <header className={styles.hero}>
-      <h1 className={styles.title}>{dict["title"]}</h1>
-      <p className={styles.description}>{dict["description"]}</p>
+      <h1 className={styles.title}>{title || dict["title"]}</h1>
+      <p className={styles.description}>{description || dict["description"]}</p>
     </header>
   );
 };

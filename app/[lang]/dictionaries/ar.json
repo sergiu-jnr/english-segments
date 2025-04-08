@@ -20,5 +20,9 @@
   "hideTranslation": "إخفاء الترجمة",
   "showTranslation": "عرض الترجمة",
   "stopRecording": "إيقاف التسجيل",
-  "startRecording": "بدء التسجيل"
+  "startRecording": "بدء التسجيل",
+  "work": "في مكان العمل/مع الزملاء",
+  "home": "في المنزل/مع العائلة والأصدقاء",
+  "partner": "في علاقة / مع شريك",
+  "city": "في المدينة / مع الغرباء"
 }

@@ -20,5 +20,9 @@
   "hideTranslation": "Paslēpt tulkojumu",
   "showTranslation": "Rādīt tulkojumu",
   "stopRecording": "Pārtraukt ierakstīšanu",
-  "startRecording": "Ierakstīšanas sākšana"
+  "startRecording": "Ierakstīšanas sākšana",
+  "work": "Darba vietā / ar kolēģiem",
+  "home": "Mājās / kopā ar ģimeni un draugiem",
+  "partner": "Attiecībās / ar partneri",
+  "city": "Pilsētā / ar svešiniekiem"
 }

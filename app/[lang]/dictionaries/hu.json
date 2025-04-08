@@ -20,5 +20,9 @@
   "hideTranslation": "Fordítás elrejtése",
   "showTranslation": "Fordítás megjelenítése",
   "stopRecording": "Felvétel leállítása",
-  "startRecording": "Felvétel indítása"
+  "startRecording": "Felvétel indítása",
+  "work": "A munkahelyen / kollégákkal",
+  "home": "Otthon / családdal és barátokkal",
+  "partner": "Párkapcsolatban / partnerrel",
+  "city": "A városban / idegenekkel"
 }

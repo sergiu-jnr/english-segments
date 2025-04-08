@@ -20,5 +20,9 @@
   "hideTranslation": "Verberg vertaling",
   "showTranslation": "Vertaling tonen",
   "stopRecording": "Opname stoppen",
-  "startRecording": "Opname starten"
+  "startRecording": "Opname starten",
+  "work": "Op het werk / met collega's",
+  "home": "Thuis / met familie en vrienden",
+  "partner": "In een relatie / met partner",
+  "city": "In de stad / met vreemden"
 }
