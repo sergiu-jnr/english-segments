@@ -30,5 +30,5 @@ export function middleware(request) {
 }
 
 export const config = {
-    '/((?!_next|api|public|media|robots\\.txt|sitemap\\.xml).*)',
+    '/((?!_next|api|public|media|robots\\.txt|sitemap\\.xml).*)'
 };
