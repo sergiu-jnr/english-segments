@@ -64,6 +64,8 @@ const SegmentItem: React.FC<{
 
     const duration = "PT" + Math.floor(segment.audio_file.length / 60) + "M" + (segment.audio_file.length % 60) + "S";
 
+    if (0) console.log(formattedDate, duration)
+
     return (
         <Link href={`/${segment.lang}/${segment.slug}`} key={segment.id} className={styles.segment}>
             <div className={styles.imageContainer}>
