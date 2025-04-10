@@ -30,5 +30,5 @@ export function middleware(request) {
 }
 
 export const config = {
-  matcher: "/((?!_next|api|public|media).*)", // Ignore Next.js internal files and APIs
+    '/((?!_next|api|public|media|robots\\.txt|sitemap\\.xml).*)',
 };
