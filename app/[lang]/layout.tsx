@@ -50,7 +50,12 @@ export default async function RootLayout({
       <head>
         {/* Preconnect to external domains for faster loading */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://emoji-css.afeld.me" />
+        <link 
+          rel="stylesheet" 
+          href="https://emoji-css.afeld.me/emoji.css" 
+          media="print" 
+          onLoad={() => {(document.querySelector('link[href="https://emoji-css.afeld.me/emoji.css"]') as HTMLLinkElement).media = 'all'}}
+        />
         
         {/* Icons and Favicons */}
         <link rel="icon" type="image/png" href="/media/favicon-96x96.png" sizes="96x96" />
