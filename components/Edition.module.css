@@ -88,7 +88,7 @@
     cursor: pointer;
 }
 
-.segmentDetails:hover {
+.segment:hover .segmentDetails {
     background: #18212e;
 }
 
@@ -98,7 +98,7 @@
         border: 1px solid rgba(0, 0, 0, 0.1);
     }
 
-    .segmentDetails:hover {
+    .segment:hover .segmentDetails {
         background: #e6e5e5;
     }
 }
@@ -169,8 +169,8 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 } */
 
-.segment a:hover {
-    opacity: 0.75;
+.segment:hover {
+    opacity: 0.85;
 }
 
 .imageContainer {
