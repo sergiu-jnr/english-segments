@@ -65,7 +65,7 @@ const SegmentItem: React.FC<{
     
     return (
         <Link href={`/${segment.lang}/${segment.slug}`} key={segment.id} className={styles.segment}>
-            <div className={styles.imageContainer
+            <div className={styles.imageContainer>
                 <Image
                   src={segment.cover_image}
                   width={483.9}
