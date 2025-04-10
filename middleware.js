@@ -31,6 +31,6 @@ export function middleware(request) {
 
 export const config = {
     matcher: [
-    '/((?!_next|api|public|media|robots\\.txt|sitemap\\.xml).*)'
+    '/((?!_next|api|public|media|yandex_e3f529782174cad6\\.html|robots\\.txt|sitemap\\.xml).*)'
   ]
 };
