@@ -65,7 +65,7 @@ const SegmentItem: React.FC<{
     const duration = "PT" + Math.floor(segment.audio_file.length / 60) + "M" + (segment.audio_file.length % 60) + "S";
 
     return (
-        <div key={segment.id} className={styles.segment}>
+        <Link href={`/${segment.lang}/${segment.slug}`} key={segment.id} className={styles.segment}>
             <div className={styles.imageContainer}>
                 <Image
                   src={segment.cover_image}
@@ -86,7 +86,7 @@ const SegmentItem: React.FC<{
                     height={280}
                 /> */}
             </div>
-            <Link href={`/${segment.lang}/${segment.slug}`} className={styles.segmentDetails}>
+            <div className={styles.segmentDetails}>
                 {segment.english === 'american' &&
                     <div className={styles.segmentSubtitle}>
                         <span className={`${styles.subtitleFlag} fi fi-us`} />
@@ -101,8 +101,8 @@ const SegmentItem: React.FC<{
                 }
                 <h3 className={styles.segmentTitle}>{segment.title}</h3>
                 <p className={styles.segmentDescription}>{segment.description}</p>
-            </Link>
-        </div>
+            </div>
+        </Link>
     )
 }
 
