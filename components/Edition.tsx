@@ -3,7 +3,8 @@ import styles from "./Edition.module.css";
 import Segment from "@/types/segment";
 import Link from "next/link";
 import categoryToTitle from "@/constants/categoryToTitle";
-import VideoPlayer from "./VideoPlayer";
+// import VideoPlayer from "./VideoPlayer";
+import Image from 'next/image'
 
 type Props = {
     dict: Record<string, string>;
@@ -63,10 +64,19 @@ const SegmentItem: React.FC<{
 
     const duration = "PT" + Math.floor(segment.audio_file.length / 60) + "M" + (segment.audio_file.length % 60) + "S";
 
+    if (0) console.log(formattedDate, duration)
+
     return (
-        <div key={segment.id} className={styles.segment}>
+        <Link href={`/${segment.lang}/${segment.slug}`} key={segment.id} className={styles.segment}>
             <div className={styles.imageContainer}>
-                <VideoPlayer
+                <Image
+                  src={segment.cover_image}
+                  width={483.9}
+                  height={280}
+                  style={{ objectFit: "cover" }}
+                  alt={segment.title}
+                />
+{/*                 <VideoPlayer
                     videoSrc={segment.video_file}
                     posterSrc={segment.cover_image}
                     subtitleSrc={segment.subtitle_file}
@@ -76,9 +86,9 @@ const SegmentItem: React.FC<{
                     uploadDate={formattedDate}
                     width={483.9}
                     height={280}
-                />
+                /> */}
             </div>
-            <Link href={`/${segment.lang}/${segment.slug}`} className={styles.segmentDetails}>
+            <div className={styles.segmentDetails}>
                 {segment.english === 'american' &&
                     <div className={styles.segmentSubtitle}>
                         <span className={`${styles.subtitleFlag} fi fi-us`} />
@@ -93,8 +103,8 @@ const SegmentItem: React.FC<{
                 }
                 <h3 className={styles.segmentTitle}>{segment.title}</h3>
                 <p className={styles.segmentDescription}>{segment.description}</p>
-            </Link>
-        </div>
+            </div>
+        </Link>
     )
 }
 
