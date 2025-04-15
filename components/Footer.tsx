@@ -2,13 +2,18 @@ import React from "react";
 import Image from "next/image";
 import styles from "./Footer.module.css";
 import Link from "next/link";
+import Lang from "@/types/lang";
+import Page from "@/types/page";
 
 type Params = {
+  lang: Lang;
   dict: Record<string, string>;
+  termsAndConditions: Page | undefined;
+  privacyPolicy: Page | undefined
 }
 
-const Footer: React.FC<Params> = ({ dict }) => {
-  
+const Footer: React.FC<Params> = ({ dict, termsAndConditions, privacyPolicy }) => {
+
   return (
     <div className={styles.footer}>
       <div className={styles.container}>
@@ -17,13 +22,17 @@ const Footer: React.FC<Params> = ({ dict }) => {
         </div>
 
         <div className={styles.legal}>
-          <Link href={'https://www.tiktok.com/'} className={styles.legalLink}>
-            <span>{dict['termsAndConditions']}</span>
-          </Link>
+          {termsAndConditions &&
+            <Link href={`/p/${termsAndConditions['slug']}`} className={styles.legalLink}>
+              <span>{termsAndConditions['title']}</span>
+            </Link>
+          }
 
-          <Link href={'https://www.instragram.com/'} className={styles.legalLink}>
-            <span>{dict['privacyPolicy']}</span>
-          </Link>
+          {privacyPolicy &&
+            <Link href={`/p/${privacyPolicy['slug']}`} className={styles.legalLink}>
+              <span>{privacyPolicy['title']}</span>
+            </Link>
+          }
         </div>
 
         <div className={styles.social}>

@@ -1,10 +1,10 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { getDictionary } from "../dictionaries";
-import fetchSegment from "@/util/fetch-segment";
+import { getDictionary } from "../../dictionaries";
 import Lang from "@/types/lang";
-import SegmentPage from "@/components/SegmentPage";
 import { Metadata } from "next";
+import fetchPage from "@/util/fetch-page";
+import MarkdownPage from "@/components/MarkdownPage";
 import fetchPages from "@/util/fetch-pages";
 import Page from "@/types/page";
 
@@ -13,11 +13,11 @@ export async function generateMetadata({ params }: {
 }): Promise<Metadata> {
   const { slug } = await params
 
-  const segment = await fetchSegment(slug)
+  const page = await fetchPage(slug)
 
   return {
-    title: segment.title,
-    description: segment.description,
+    title: page.title,
+    description: page.description,
   }
 }
 
@@ -29,15 +29,16 @@ export default async function Segment({ params }: {
   const { slug, lang } = await params
   const dict = await getDictionary(lang)
 
-  const segment = await fetchSegment(slug)
+  const page = await fetchPage(slug)
+
   const pages = await fetchPages(lang)
   const termsAndConditions = pages.find((page: Page) => page.type === "terms-and-conditions")
   const privacyPolicy = pages.find((page: Page) => page.type === "privacy-policy")
-
+  
   return (
     <>
-      <Header dict={dict} lang={lang} page={segment.slug} />
-      <SegmentPage dict={dict} segment={segment} />
+      <Header dict={dict} lang={lang} page={page.slug} />
+      <MarkdownPage dict={dict} page={page} />
       <Footer dict={dict} lang={lang} termsAndConditions={termsAndConditions} privacyPolicy={privacyPolicy} />
     </>
   );

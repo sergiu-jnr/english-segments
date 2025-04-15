@@ -1,9 +1,9 @@
-import Segment from "@/types/segment";
+import Page from "@/types/page";
 
-export default async function fetchSegment(
+export default async function fetchPage(
     slug: string
-  ): Promise<Segment> {
-    const baseUrl = "https://itb-nine.vercel.app/api/segments";
+  ): Promise<Page> {
+    const baseUrl = "https://itb-nine.vercel.app/api/pages";
     const params = new URLSearchParams({
       slug,
     });
@@ -17,7 +17,7 @@ export default async function fetchSegment(
       }
       return await response.json();
     } catch (error) {
-      console.error("Error fetching segments:", error);
+      console.error("Error fetching page:", error);
       throw error;
     }
   }
