@@ -15,10 +15,18 @@ export async function generateMetadata({ params }: {
 
   const page = await fetchPage(slug)
 
-  return {
+  const meta: Metadata = {
     title: page.title,
     description: page.description,
   }
+
+  if (page.image_url) {
+    meta.openGraph = {
+      images: [{ url: page.image_url }]
+    }
+  }
+
+  return meta
 }
 
 export const revalidate = 3600
@@ -34,7 +42,7 @@ export default async function Segment({ params }: {
   const pages = await fetchPages(lang)
   const termsAndConditions = pages.find((page: Page) => page.type === "terms-and-conditions")
   const privacyPolicy = pages.find((page: Page) => page.type === "privacy-policy")
-  
+
   return (
     <>
       <Header dict={dict} lang={lang} page={page.slug} />

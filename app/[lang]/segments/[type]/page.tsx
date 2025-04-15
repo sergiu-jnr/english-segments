@@ -6,6 +6,8 @@ import { Metadata } from "next";
 import fetchSegments from "@/util/fetch-segments";
 import Segments from "@/components/Segments";
 import Hero from "@/components/Hero";
+import fetchPages from "@/util/fetch-pages";
+import Page from "@/types/page";
 
 export async function generateMetadata({ params }: {
   params: Promise<{ lang: Lang, type: string }>
@@ -29,13 +31,16 @@ export default async function Segment({ params }: {
   const dict = await getDictionary(lang)
 
   const segments = await fetchSegments(false, lang, type)
+  const pages = await fetchPages(lang)
+  const termsAndConditions = pages.find((page: Page) => page.type === "terms-and-conditions")
+  const privacyPolicy = pages.find((page: Page) => page.type === "privacy-policy")
 
   return (
     <>
       <Header dict={dict} lang={lang} page={`segments/${type}`} />
       <Hero dict={dict} title={dict[`${type}Segments`]} />
       <Segments dict={dict} segments={segments} />
-      <Footer dict={dict} />
+      <Footer dict={dict} lang={lang} termsAndConditions={termsAndConditions} privacyPolicy={privacyPolicy} />
     </>
   );
 }
