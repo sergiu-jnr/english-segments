@@ -14,5 +14,16 @@
   "copyright": "© 2025 English Segments. Всі права захищені.",
   "youtube": "YouTube",
   "tiktok": "TikTok",
-  "instagram": "Instagram"
+  "instagram": "Instagram",
+  "audiosVolume": "Гучність звуку фраз",
+  "recordingsVolume": "Гучність аудіозаписів",
+  "hideTranslation": "Приховати переклад",
+  "showTranslation": "Показати переклад",
+  "stopRecording": "Зупинити запис",
+  "startRecording": "Почати запис",
+  "work": "На робочому місці / з колегами",
+  "home": "Вдома / з родиною та друзями",
+  "partner": "У стосунках / з партнером",
+  "city": "У місті / з незнайомцями",
+  "blogDescription": "Читайте наш блог, щоб дізнатися більше про англійську мову, культуру та поради щодо розмовної мови."
 }

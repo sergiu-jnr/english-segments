@@ -10,10 +10,10 @@ type Params = {
 const Hero: React.FC<Params> = (props: Params) => {
   const { title, description, dict } = props;
   return (
-    <header className={styles.hero}>
+    <div className={styles.hero}>
       <h1 className={styles.title}>{title || dict["title"]}</h1>
       <p className={styles.description}>{description || dict["description"]}</p>
-    </header>
+    </div>
   );
 };
 
