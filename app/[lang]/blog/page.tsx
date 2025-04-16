@@ -36,7 +36,7 @@ export default async function Blog({ params }: {
   return (
     <>
       <Header dict={dict} lang={lang} page={`blog`} />
-      <Hero dict={dict} title={dict[`blog`]} />
+      <Hero dict={dict} title={dict[`blog`]} description={dict[`blogDescription`]} />
       <ListPages dict={dict} pages={pages.filter(o => o.type === 'article')} />
       <Footer dict={dict} lang={lang} termsAndConditions={termsAndConditions} privacyPolicy={privacyPolicy} />
     </>
