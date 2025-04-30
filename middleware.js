@@ -15,11 +15,12 @@ function getLocale(request) {
 export function middleware(request) {
   const { pathname } = request.nextUrl;
 
-   // Skip redirection for the root path
+  // Special handling for root path
   if (pathname === "/") {
-    // For root path, we don't redirect but continue to the page
-    // The default locale will be handled internally by Next.js
-    return;
+    // Instead of doing nothing, we'll rewrite to /en internally
+    // This doesn't change the URL in the browser but serves /en content
+    request.nextUrl.pathname = `/en`;
+    return NextResponse.rewrite(request.nextUrl);
   }
 
   const pathnameHasLocale = locales.some(
