@@ -17,7 +17,7 @@ const Edition: React.FC<Props> = (props: Props) => {
     const categories = {
         "movie": segments.filter((segment) => segment.type === "movie"),
         "podcast": segments.filter((segment) => segment.type === "podcast"),
-        "story": segments.filter((segment) => segment.type === "story"),
+        // "story": segments.filter((segment) => segment.type === "story"),
     }
 
     return (

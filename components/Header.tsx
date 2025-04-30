@@ -41,13 +41,13 @@ const Header: React.FC<Props> = (props: Props) => {
                         <span className={`${styles.navLink} ${page === 'segments/podcast' ? styles.active : ''}`}>{dict['podcastSegments']}</span>
                     </Link>
 
-                    <Link href={`/${lang}/segments/story`}>
+                    {/* <Link href={`/${lang}/segments/story`}>
                         <span className={`${styles.navLink} ${page === 'segments/story' ? styles.active : ''}`}>{dict['storySegments']}</span>
-                    </Link>
+                    </Link> */}
 
-                    <Link href={`/${lang}/blog`}>
+                    {/* <Link href={`/${lang}/blog`}>
                         <span className={`${styles.navLink} ${page === 'blog' ? styles.active : ''}`}>{dict['blog']}</span>
-                    </Link>
+                    </Link> */}
 
                     {/* <Link href="/stories-for-speaking">
                         <span className={`${styles.navLink} ${page === 'stories-for-speaking' ? styles.active : ''}`}>Stories for Speaking</span>
@@ -61,10 +61,13 @@ const Header: React.FC<Props> = (props: Props) => {
                 </div>
 
                 <MobileToggle />
-                {/* <button className={styles.premiumButton}>
-                    <Image src="/external-link.svg" alt="Go to the shop" width={15} height={15} />
-                    TPR Kit for Speaking
-                </button> */}
+
+                <Link href="https://shop.englishsegments.com" className={styles.shopButton}>
+                    <button className={styles.premiumButton}>
+                        <Image src="/media/external-link.svg" alt="Go to the shop" width={15} height={15} />
+                        Stories for Speaking
+                    </button>
+                </Link>
             </div>
         </div>
     );
