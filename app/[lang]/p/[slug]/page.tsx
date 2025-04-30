@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: {
   return meta
 }
 
-export const revalidate = 7884000
+export const revalidate = 1209600
 
 export default async function Segment({ params }: {
   params: Promise<{ lang: Lang, slug: string }>
