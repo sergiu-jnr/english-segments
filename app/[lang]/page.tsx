@@ -33,7 +33,7 @@ export async function generateMetadata(
   }
 }
 
-export const revalidate = 7889400
+export const revalidate = 1209600
 
 export default async function Home({ params }: {
   params: Promise<{ lang: Lang }>
