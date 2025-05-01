@@ -37,6 +37,7 @@ export default async function RootLayout({
         <link rel="stylesheet" href="https://emoji-css.afeld.me/emoji.css" />
         <link rel="icon" type="image/png" href="/media/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/media/favicon.svg" />
+        <link rel="icon" href="https://www.englishsegments.com/favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="/media/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/media/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="English" />
