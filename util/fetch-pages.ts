@@ -12,7 +12,7 @@ export default async function fetchPages(
     const url = `${baseUrl}?${params.toString()}`;
   
     try {
-      const response = await fetch(url);
+      const response = await fetch(url, { next: { revalidate: 1209600 } });
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
