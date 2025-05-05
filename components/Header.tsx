@@ -42,7 +42,7 @@ const Header: React.FC<Props> = (props: Props) => {
                     </Link>
 
                     <Link href="https://shop.englishsegments.com" className={styles.shopButtonMobile}>
-                        <span className={`${styles.navLink}`}>Lessons for Speaking</span>
+                        <span className={`${styles.navLink}`}>Shop</span>
                     </Link>
 
                     {/* <Link href={`/${lang}/segments/story`}>
@@ -69,7 +69,7 @@ const Header: React.FC<Props> = (props: Props) => {
                 <Link href="https://shop.englishsegments.com" className={styles.shopButton}>
                     <button className={styles.premiumButton}>
                         <Image src="/media/external-link.svg" alt="Lessons for Speaking" width={15} height={15} />
-                        Lessons for Speaking
+                        Shop
                     </button>
                 </Link>
             </div>
