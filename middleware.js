@@ -39,6 +39,6 @@ export function middleware(request) {
 
 export const config = {
     matcher: [
-    '/((?!_next|api|public|media|yandex_e3f529782174cad6\\.html|robots\\.txt|BingSiteAuth\\.xml|sitemap\\.xml).*)'
+    '/((?!_next|api|public|media|yandex_e3f529782174cad6\\.html|favicon\\.ico|robots\\.txt|BingSiteAuth\\.xml|sitemap\\.xml).*)'
   ]
 };

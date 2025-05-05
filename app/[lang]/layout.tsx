@@ -4,7 +4,7 @@ import "@/node_modules/flag-icons/css/flag-icons.min.css";
 import 'rc-slider/assets/index.css';
 import Script from "next/script";
 import Lang from "@/types/lang";
-import Favicon from "../../public/media/favicon.ico"
+import Favicon from "../../public/favicon.ico"
 
 export const metadata: Metadata = {
   title: "English Segments",
@@ -37,8 +37,8 @@ export default async function RootLayout({
         <link rel="stylesheet" href="https://emoji-css.afeld.me/emoji.css" />
         <link rel="icon" type="image/png" href="https://www.englishsegments.com/media/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="https://www.englishsegments.com/media/favicon.svg" />
-        <link rel="icon" href="https://www.englishsegments.com/media/favicon.ico" type="image/x-icon" />
-        <link rel="shortcut icon" href="https://www.englishsegments.com/media/favicon.ico" />
+        <link rel="icon" href="https://www.englishsegments.com/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="https://www.englishsegments.com/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="https://www.englishsegments.com/media/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="English" />
         <link rel="manifest" href="https://www.englishsegments.com/media/site.webmanifest" />
