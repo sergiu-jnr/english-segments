@@ -41,6 +41,10 @@ const Header: React.FC<Props> = (props: Props) => {
                         <span className={`${styles.navLink} ${page === 'segments/podcast' ? styles.active : ''}`}>{dict['podcastSegments']}</span>
                     </Link>
 
+                    <Link href="https://shop.englishsegments.com" className={styles.shopButtonMobile}>
+                        <span className={`${styles.navLink}`}>Lessons for Speaking</span>
+                    </Link>
+
                     {/* <Link href={`/${lang}/segments/story`}>
                         <span className={`${styles.navLink} ${page === 'segments/story' ? styles.active : ''}`}>{dict['storySegments']}</span>
                     </Link> */}
@@ -64,8 +68,8 @@ const Header: React.FC<Props> = (props: Props) => {
 
                 <Link href="https://shop.englishsegments.com" className={styles.shopButton}>
                     <button className={styles.premiumButton}>
-                        <Image src="/media/external-link.svg" alt="Go to the shop" width={15} height={15} />
-                        Stories for Speaking
+                        <Image src="/media/external-link.svg" alt="Lessons for Speaking" width={15} height={15} />
+                        Lessons for Speaking
                     </button>
                 </Link>
             </div>

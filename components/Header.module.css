@@ -204,3 +204,17 @@
     align-items: center;
     gap: 5px;
 }
+
+.shopButtonMobile {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .shopButton {
+        display: none;
+    }
+
+    .shopButtonMobile {
+        display: block;
+    }
+}
