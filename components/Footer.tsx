@@ -12,7 +12,7 @@ type Params = {
   privacyPolicy: Page | undefined
 }
 
-const Footer: React.FC<Params> = ({ dict, termsAndConditions, privacyPolicy }) => {
+const Footer: React.FC<Params> = ({ lang, dict, termsAndConditions, privacyPolicy }) => {
 
   return (
     <div className={styles.footer}>
@@ -23,31 +23,31 @@ const Footer: React.FC<Params> = ({ dict, termsAndConditions, privacyPolicy }) =
 
         <div className={styles.legal}>
           {termsAndConditions &&
-            <Link href={`/p/${termsAndConditions['slug']}`} className={styles.legalLink}>
+            <Link href={`/${lang}/p/${termsAndConditions['slug']}`} className={styles.legalLink}>
               <span>{termsAndConditions['title']}</span>
             </Link>
           }
 
           {privacyPolicy &&
-            <Link href={`/p/${privacyPolicy['slug']}`} className={styles.legalLink}>
+            <Link href={`/${lang}/p/${privacyPolicy['slug']}`} className={styles.legalLink}>
               <span>{privacyPolicy['title']}</span>
             </Link>
           }
         </div>
 
         <div className={styles.social}>
-          <Link href={'https://www.youtube.com/'} className={styles.socialLink}>
-            <Image src="/media/youtube.svg" alt="New English on Youtube" width={20} height={20} />
+          <Link href={'https://www.youtube.com/@englishsegments'} className={styles.socialLink}>
+            <Image src="/media/youtube.svg" alt="English Segments on Youtube" width={20} height={20} />
             <span>{dict['youtube']}</span>
           </Link>
 
-          <Link href={'https://www.tiktok.com/'} className={styles.socialLink}>
-            <Image src="/media/tiktok.svg" alt="New English on TikTok" width={20} height={20} />
+          <Link href={'https://www.tiktok.com/@englishsegments'} className={styles.socialLink}>
+            <Image src="/media/tiktok.svg" alt="English Segments on TikTok" width={20} height={20} />
             <span>{dict['tiktok']}</span>
           </Link>
 
-          <Link href={'https://www.instragram.com/'} className={styles.socialLink}>
-            <Image src="/media/instagram.svg" alt="New English on Instagram" width={20} height={20} />
+          <Link href={'https://www.instagram.com/englishsegments'} className={styles.socialLink}>
+            <Image src="/media/instagram.svg" alt="English Segments on Instagram" width={20} height={20} />
             <span>{dict['instagram']}</span>
           </Link>
         </div>
