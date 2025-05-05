@@ -24,7 +24,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   posterSrc,
   title = 'Video content',
   description = 'Video player',
-  duration = '0:00',
   uploadDate = new Date().toISOString(),
   width = 640,
   height = 360,
@@ -51,7 +50,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
               description: description,
               thumbnailUrl: posterSrc,
               uploadDate: uploadDate,
-              duration: duration,
               contentUrl: videoSrc,
 
               // accessibilityFeature: ['captions'],
@@ -65,7 +63,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         <meta itemProp="name" content={title} />
         <meta itemProp="description" content={description} />
         <meta itemProp="uploadDate" content={uploadDate} />
-        <meta itemProp="duration" content={duration} />
         <meta itemProp="thumbnailUrl" content={posterSrc} />
         <meta itemProp="contentUrl" content={videoSrc} />
         

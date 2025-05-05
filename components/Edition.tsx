@@ -17,13 +17,10 @@ const Edition: React.FC<Props> = (props: Props) => {
     const categories = {
         "movie": segments.filter((segment) => segment.type === "movie"),
         "podcast": segments.filter((segment) => segment.type === "podcast"),
-        // "story": segments.filter((segment) => segment.type === "story"),
     }
 
     return (
         <div className={styles.edition}>
-            {/* <h2 className={styles.title}>Latest Edition</h2> */}
-
             {Object.keys(categories).map((category) => {
                 const categorySegments = categories[category as keyof typeof categories];
                 if (categorySegments.length === 0) return null;
@@ -44,8 +41,6 @@ const Edition: React.FC<Props> = (props: Props) => {
                     </div>
                 );
             })}
-
-
         </div>
     );
 };
@@ -54,18 +49,6 @@ const SegmentItem: React.FC<{
     dict: Record<string, string>;
     segment: Segment
 }> = ({ dict, segment }) => {
-    const createdAt = new Date(segment.created_at);
-
-    const formattedDate = createdAt.toLocaleDateString(segment.lang, {
-        month: "long",
-        day: "2-digit",
-        year: "numeric",
-    });
-
-    const duration = "PT" + Math.floor(segment.audio_file.length / 60) + "M" + (segment.audio_file.length % 60) + "S";
-
-    if (0) console.log(formattedDate, duration)
-
     return (
         <Link href={`/${segment.lang}/${segment.slug}`} key={segment.id} className={styles.segment}>
             <div className={styles.imageContainer}>
@@ -76,17 +59,6 @@ const SegmentItem: React.FC<{
                   style={{ objectFit: "cover" }}
                   alt={segment.title}
                 />
-{/*                 <VideoPlayer
-                    videoSrc={segment.video_file}
-                    posterSrc={segment.cover_image}
-                    subtitleSrc={segment.subtitle_file}
-                    title={segment.title}
-                    description={segment.description}
-                    duration={duration}
-                    uploadDate={formattedDate}
-                    width={483.9}
-                    height={280}
-                /> */}
             </div>
             <div className={styles.segmentDetails}>
                 {segment.english === 'american' &&

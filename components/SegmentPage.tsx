@@ -16,15 +16,6 @@ type Props = {
 
 const SegmentPage: React.FC<Props> = (props: Props) => {
   const { dict, segment } = props;
-  const createdAt = new Date(segment.created_at);
-
-  const formattedDate = createdAt.toLocaleDateString(segment.lang, {
-    month: "long",
-    day: "2-digit",
-    year: "numeric",
-  });
-
-  const duration = "PT" + Math.floor(segment.audio_file.length / 60) + "M" + (segment.audio_file.length % 60) + "S";
 
   return (
     <div className={styles.segment}>
@@ -52,8 +43,7 @@ const SegmentPage: React.FC<Props> = (props: Props) => {
           subtitleSrc={segment.subtitle_file}
           title={segment.title}
           description={segment.description}
-          duration={duration}
-          uploadDate={formattedDate}
+          uploadDate={segment.created_at}
         />
       </div>
 
