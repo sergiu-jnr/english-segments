@@ -33,6 +33,7 @@ export async function generateMetadata(
   }
 }
 
+export const dynamic = 'force-static'
 export const revalidate = 1209600
 
 export default async function Home({ params }: {
