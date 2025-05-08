@@ -7,47 +7,76 @@ import fetchPage from "@/util/fetch-page";
 import MarkdownPage from "@/components/MarkdownPage";
 import fetchPages from "@/util/fetch-pages";
 import Page from "@/types/page";
+import languages from "@/constants/languages";
 
 export async function generateMetadata({ params }: {
   params: Promise<{ lang: Lang, slug: string }>
 }): Promise<Metadata> {
-  const { slug } = await params
-
-  const page = await fetchPage(slug)
-
+  const { slug } = await params;
+  const page = await fetchPage(slug);
   const meta: Metadata = {
     title: page.title,
     description: page.description,
-  }
-
+  };
   if (page.image_url) {
     meta.openGraph = {
       images: [{ url: page.image_url }]
-    }
+    };
   }
-
-  return meta
+  return meta;
 }
 
-export const revalidate = 1209600
+// Configure ISR with a revalidation period of 1 hour (3600 seconds)
+export const revalidate = 3600;
 
-export default async function Segment({ params }: {
+// Enable dynamic params for on-demand generation of non-prerendered paths
+export const dynamicParams = true;
+
+// Pre-generate important pages at build time
+export async function generateStaticParams() {
+  // Get a list of all pages from your API or data source
+  // For example:
+  const commonSlugs = [
+    "about", 
+    "terms-and-conditions", 
+    "privacy-policy"
+  ];
+  
+  const params = [];
+  
+  // Create combinations of all languages with common page slugs
+  for (const language of languages) {
+    for (const slug of commonSlugs) {
+      params.push({
+        lang: language.code as Lang,
+        slug
+      });
+    }
+  }
+  
+  return params;
+}
+
+export default async function PageComponent({ params }: {
   params: Promise<{ lang: Lang, slug: string }>
 }) {
-  const { slug, lang } = await params
-  const dict = await getDictionary(lang)
-
-  const page = await fetchPage(slug)
-
-  const pages = await fetchPages(lang)
-  const termsAndConditions = pages.find((page: Page) => page.type === "terms-and-conditions")
-  const privacyPolicy = pages.find((page: Page) => page.type === "privacy-policy")
-
+  const { slug, lang } = await params;
+  const dict = await getDictionary(lang);
+  const page = await fetchPage(slug);
+  const pages = await fetchPages(lang);
+  const termsAndConditions = pages.find((page: Page) => page.type === "terms-and-conditions");
+  const privacyPolicy = pages.find((page: Page) => page.type === "privacy-policy");
+  
   return (
     <>
       <Header dict={dict} lang={lang} page={page.slug} />
       <MarkdownPage dict={dict} page={page} />
-      <Footer dict={dict} lang={lang} termsAndConditions={termsAndConditions} privacyPolicy={privacyPolicy} />
+      <Footer 
+        dict={dict} 
+        lang={lang} 
+        termsAndConditions={termsAndConditions} 
+        privacyPolicy={privacyPolicy} 
+      />
     </>
   );
 }
