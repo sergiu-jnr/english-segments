@@ -37,7 +37,6 @@ export async function generateStaticParams() {
   // Get a list of all pages from your API or data source
   // For example:
   const commonSlugs = [
-    "about", 
     "terms-and-conditions", 
     "privacy-policy"
   ];
