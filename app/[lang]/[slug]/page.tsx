@@ -8,8 +8,8 @@ import { Metadata } from "next";
 import fetchPages from "@/util/fetch-pages";
 import fetchBuild from "@/util/fetch-build";
 import Page from "@/types/page";
-import languages from "@/constants/languages";
-import fetchSegments from "@/util/fetch-segments";
+// import languages from "@/constants/languages";
+// import fetchSegments from "@/util/fetch-segments";
 
 export async function generateMetadata({ params }: {
   params: Promise<{ lang: Lang, slug: string }>
