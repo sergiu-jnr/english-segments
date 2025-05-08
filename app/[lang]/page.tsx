@@ -12,9 +12,10 @@ import fetchPages from "@/util/fetch-pages";
 import Page from "@/types/page";
 
 export async function generateMetadata(
-  { params }: { params: { lang: Lang } }
+  { params }: { params: Promise<{ lang: Lang }> }
 ): Promise<Metadata> {
-  const dict = await getDictionary(params.lang);
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
   return {
     title: dict.title,
     description: dict.description,
@@ -44,22 +45,25 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Home({ params }: { params: { lang: Lang } }) {
-  const dict = await getDictionary(params.lang);
-  const segments = await fetchSegments(true, params.lang);
-  const pages = await fetchPages(params.lang);
+export default async function Home({ params }: { 
+  params: Promise<{ lang: Lang }> 
+}) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+  const segments = await fetchSegments(true, lang);
+  const pages = await fetchPages(lang);
   const termsAndConditions = pages.find((page: Page) => page.type === "terms-and-conditions");
   const privacyPolicy = pages.find((page: Page) => page.type === "privacy-policy");
 
   return (
     <>
-      <Header dict={dict} lang={params.lang} page="/" />
+      <Header dict={dict} lang={lang} page="/" />
       <Hero dict={dict} />
-      <AvailableLanguages lang={params.lang} languages={languages} />
+      <AvailableLanguages lang={lang} languages={languages} />
       <Edition dict={dict} segments={segments} />
       <Footer
         dict={dict}
-        lang={params.lang}
+        lang={lang}
         termsAndConditions={termsAndConditions}
         privacyPolicy={privacyPolicy}
       />
