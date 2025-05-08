@@ -7,7 +7,7 @@ import fetchPage from "@/util/fetch-page";
 import MarkdownPage from "@/components/MarkdownPage";
 import fetchPages from "@/util/fetch-pages";
 import Page from "@/types/page";
-import languages from "@/constants/languages";
+// import languages from "@/constants/languages";
 
 export async function generateMetadata({ params }: {
   params: Promise<{ lang: Lang, slug: string }>
@@ -36,24 +36,24 @@ export const dynamicParams = true;
 export async function generateStaticParams() {
   // Get a list of all pages from your API or data source
   // For example:
-  const commonSlugs = [
-    "terms-and-conditions", 
-    "privacy-policy"
-  ];
+  // const commonSlugs = [
+  //   "terms-and-conditions", 
+  //   "privacy-policy"
+  // ];
   
-  const params = [];
+  // const params = [];
   
   // Create combinations of all languages with common page slugs
-  for (const language of languages) {
-    for (const slug of commonSlugs) {
-      params.push({
-        lang: language.code as Lang,
-        slug
-      });
-    }
-  }
+  // for (const language of languages) {
+  //   for (const slug of commonSlugs) {
+  //     params.push({
+  //       lang: language.code as Lang,
+  //       slug
+  //     });
+  //   }
+  // }
   
-  return params;
+  return [];
 }
 
 export default async function PageComponent({ params }: {
