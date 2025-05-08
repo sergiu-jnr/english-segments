@@ -7,17 +7,14 @@ import languages from "@/constants/languages";
 import fetchSegments from "@/util/fetch-segments";
 import { getDictionary } from "./dictionaries";
 import Lang from "@/types/lang";
-import { Metadata, } from "next";
+import { Metadata } from "next";
 import fetchPages from "@/util/fetch-pages";
 import Page from "@/types/page";
 
 export async function generateMetadata(
-  { params }: { params: Promise<{ lang: Lang }> }
+  { params }: { params: { lang: Lang } }
 ): Promise<Metadata> {
-  const { lang } = await params
-
-  const dict = await getDictionary(lang)
-
+  const dict = await getDictionary(params.lang);
   return {
     title: dict.title,
     description: dict.description,
@@ -28,32 +25,44 @@ export async function generateMetadata(
           width: 795,
           height: 300,
         },
-      ]
+      ],
     },
-  }
+  };
 }
 
-export const dynamic = 'force-static'
-export const revalidate = 1209600
+// Configure ISR with a revalidation period of 1 hour (3600 seconds)
+export const revalidate = 3600;
 
-export default async function Home({ params }: {
-  params: Promise<{ lang: Lang }>
-}) {
-  const { lang } = await params
-  const dict = await getDictionary(lang)
+// Enable dynamic params - if a language is requested that wasn't
+// statically generated, it will be generated on demand
+export const dynamicParams = true;
 
-  const segments = await fetchSegments(true, lang)
-  const pages = await fetchPages(lang)
-  const termsAndConditions = pages.find((page: Page) => page.type === "terms-and-conditions")
-  const privacyPolicy = pages.find((page: Page) => page.type === "privacy-policy")
+// Generate static params for known languages at build time
+export async function generateStaticParams() {
+  return languages.map((language) => ({
+    lang: language.code as Lang,
+  }));
+}
+
+export default async function Home({ params }: { params: { lang: Lang } }) {
+  const dict = await getDictionary(params.lang);
+  const segments = await fetchSegments(true, params.lang);
+  const pages = await fetchPages(params.lang);
+  const termsAndConditions = pages.find((page: Page) => page.type === "terms-and-conditions");
+  const privacyPolicy = pages.find((page: Page) => page.type === "privacy-policy");
 
   return (
     <>
-      <Header dict={dict} lang={lang} page='/' />
+      <Header dict={dict} lang={params.lang} page="/" />
       <Hero dict={dict} />
-      <AvailableLanguages lang={lang} languages={languages} />
+      <AvailableLanguages lang={params.lang} languages={languages} />
       <Edition dict={dict} segments={segments} />
-      <Footer dict={dict} lang={lang} termsAndConditions={termsAndConditions} privacyPolicy={privacyPolicy} />
+      <Footer
+        dict={dict}
+        lang={params.lang}
+        termsAndConditions={termsAndConditions}
+        privacyPolicy={privacyPolicy}
+      />
     </>
   );
 }
