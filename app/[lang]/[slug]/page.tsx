@@ -6,6 +6,7 @@ import Lang from "@/types/lang";
 import SegmentPage from "@/components/SegmentPage";
 import { Metadata } from "next";
 import fetchPages from "@/util/fetch-pages";
+import fetchBuild from "@/util/fetch-build";
 import Page from "@/types/page";
 import languages from "@/constants/languages";
 import fetchSegments from "@/util/fetch-segments";
@@ -29,38 +30,9 @@ export const dynamicParams = true;
 
 // Pre-generate popular segments at build time
 export async function generateStaticParams() {
-  const params = [];
+  const segments = await fetchBuild("segments");
   
-  // Get a list of popular segments to pre-generate
-  // This is just an example - you may need to adjust how you fetch featured segments
-  for (const language of languages) {
-    // For each language, fetch some featured segments (e.g., first 5 from each type)
-    try {
-      // Get some segments from each type
-      const movieSegments = await fetchSegments(false, language.code as Lang, "movie");
-      const podcastSegments = await fetchSegments(false, language.code as Lang, "podcast");
-      const storySegments = await fetchSegments(false, language.code as Lang, "story");
-      
-      // Combine all segments
-      const allSegments = [...movieSegments, ...podcastSegments, ...storySegments];
-      
-      // Take the first few segments from each type (limit to avoid excessive build times)
-      const featuredSegments = allSegments.slice(0, 15);
-      
-      // Add each segment to params
-      for (const segment of featuredSegments) {
-        params.push({
-          lang: language.code as Lang,
-          slug: segment.slug
-        });
-      }
-    } catch (error) {
-      console.error(`Error fetching segments for language ${language.code}:`, error);
-      // Continue with other languages even if one fails
-    }
-  }
-  
-  return params;
+  return segments
 }
 
 export default async function Segment({ params }: {
