@@ -8,6 +8,7 @@ import MarkdownPage from "@/components/MarkdownPage";
 import fetchPages from "@/util/fetch-pages";
 import fetchBuild from "@/util/fetch-build";
 import Page from "@/types/page";
+import { notFound } from "next/navigation";
 // import languages from "@/constants/languages";
 
 export async function generateMetadata({ params }: {
@@ -46,6 +47,9 @@ export default async function PageComponent({ params }: {
   const { slug, lang } = await params;
   const dict = await getDictionary(lang);
   const page = await fetchPage(slug);
+  if (page.lang && page.lang !== lang) {
+    notFound();
+  }
   const pages = await fetchPages(lang);
   const termsAndConditions = pages.find((page: Page) => page.type === "terms-and-conditions");
   const privacyPolicy = pages.find((page: Page) => page.type === "privacy-policy");
