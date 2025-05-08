@@ -8,6 +8,7 @@ import { Metadata } from "next";
 import fetchPages from "@/util/fetch-pages";
 import fetchBuild from "@/util/fetch-build";
 import Page from "@/types/page";
+import { notFound } from "next/navigation";
 // import languages from "@/constants/languages";
 // import fetchSegments from "@/util/fetch-segments";
 
@@ -41,6 +42,9 @@ export default async function Segment({ params }: {
   const { slug, lang } = await params;
   const dict = await getDictionary(lang);
   const segment = await fetchSegment(slug);
+  if (segment.lang && segment.lang !== lang) {
+    notFound();
+  }
   const pages = await fetchPages(lang);
   const termsAndConditions = pages.find((page: Page) => page.type === "terms-and-conditions");
   const privacyPolicy = pages.find((page: Page) => page.type === "privacy-policy");
