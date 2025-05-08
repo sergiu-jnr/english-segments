@@ -10,12 +10,13 @@ import fetchPages from "@/util/fetch-pages";
 import Page from "@/types/page";
 import languages from "@/constants/languages";
 
-export async function generateMetadata({ params }: {
-  params: { lang: Lang, type: string }
-}): Promise<Metadata> {
-  const dict = await getDictionary(params.lang);
+export async function generateMetadata(
+  { params }: { params: Promise<{ lang: Lang, type: string }> }
+): Promise<Metadata> {
+  const { lang, type } = await params;
+  const dict = await getDictionary(lang);
   return {
-    title: dict[`${params.type}Segments`],
+    title: dict[`${type}Segments`],
     description: dict.description,
   };
 }
@@ -45,23 +46,24 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default async function Segment({ params }: {
-  params: { lang: Lang, type: string }
+export default async function Segment({ params }: { 
+  params: Promise<{ lang: Lang, type: string }> 
 }) {
-  const dict = await getDictionary(params.lang);
-  const segments = await fetchSegments(false, params.lang, params.type);
-  const pages = await fetchPages(params.lang);
+  const { lang, type } = await params;
+  const dict = await getDictionary(lang);
+  const segments = await fetchSegments(false, lang, type);
+  const pages = await fetchPages(lang);
   const termsAndConditions = pages.find((page: Page) => page.type === "terms-and-conditions");
   const privacyPolicy = pages.find((page: Page) => page.type === "privacy-policy");
   
   return (
     <>
-      <Header dict={dict} lang={params.lang} page={`segments/${params.type}`} />
-      <Hero dict={dict} title={dict[`${params.type}Segments`]} />
+      <Header dict={dict} lang={lang} page={`segments/${type}`} />
+      <Hero dict={dict} title={dict[`${type}Segments`]} />
       <Segments dict={dict} segments={segments} />
       <Footer 
         dict={dict} 
-        lang={params.lang} 
+        lang={lang} 
         termsAndConditions={termsAndConditions} 
         privacyPolicy={privacyPolicy} 
       />
