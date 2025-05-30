@@ -66,10 +66,10 @@ const Header: React.FC<Props> = (props: Props) => {
 
                 <MobileToggle />
 
-                <Link href="https://shop.englishsegments.com" className={styles.shopButton}>
+                <Link href="https://sergioldn.gumroad.com/" className={styles.shopButton}>
                     <button className={styles.premiumButton}>
-                        <Image src="/media/external-link.svg" alt="Lessons for Speaking" width={15} height={15} />
-                        Shop
+                        <Image src="/media/external-link.svg" alt="Sergio | London" width={15} height={15} />
+                        Weekly Newsletter
                     </button>
                 </Link>
             </div>
