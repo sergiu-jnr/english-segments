@@ -41,9 +41,9 @@ const Header: React.FC<Props> = (props: Props) => {
                         <span className={`${styles.navLink} ${page === 'segments/podcast' ? styles.active : ''}`}>{dict['podcastSegments']}</span>
                     </Link>
 
-                    <Link href="https://shop.englishsegments.com" className={styles.shopButtonMobile}>
+                    {/* <Link href="https://shop.englishsegments.com" className={styles.shopButtonMobile}>
                         <span className={`${styles.navLink}`}>Shop</span>
-                    </Link>
+                    </Link> */}
 
                     {/* <Link href={`/${lang}/segments/story`}>
                         <span className={`${styles.navLink} ${page === 'segments/story' ? styles.active : ''}`}>{dict['storySegments']}</span>
@@ -66,12 +66,12 @@ const Header: React.FC<Props> = (props: Props) => {
 
                 <MobileToggle />
 
-                <Link href="https://sergioldn.gumroad.com/" className={styles.shopButton}>
+                {/* <Link href="https://sergioldn.gumroad.com/" className={styles.shopButton}>
                     <button className={styles.premiumButton}>
                         <Image src="/media/external-link.svg" alt="Sergio | London" width={15} height={15} />
                         Weekly Newsletter
                     </button>
-                </Link>
+                </Link> */}
             </div>
         </div>
     );
